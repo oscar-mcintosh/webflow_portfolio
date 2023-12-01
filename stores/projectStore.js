@@ -23,7 +23,6 @@ export const useProjectStore = defineStore('projects', {
         }
 
         const data = await response.json();
-        console.log(data)
         const listOfProjects = data.records.map(record => ({
           id: record.id,
           name: record.fields.Name,

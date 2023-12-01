@@ -22,6 +22,7 @@ export default defineNuxtConfig({
       ],
       link: [
         {
+          rel: 'icon', type: 'image/x-icon', href: '~/assets/images/logo2.svg',
           rel: 'stylesheet',
           href: 'https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css'
         }
