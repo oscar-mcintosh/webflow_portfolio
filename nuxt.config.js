@@ -18,7 +18,9 @@ export default defineNuxtConfig({
       },
       title: 'My Portfolio',
       meta: [
-        { name: 'description', content: 'A site to display my projects'}
+        { name: 'description', 
+          content: 'Experienced, Webflow, Frontend Web Developer in Lincoln, Nebraska, crafting engaging online experiences. Transforming designs into seamless, responsive websites. Let\'s bring your digital vision to life! Contact me for expert frontend development.'
+        }
       ],
       link: [
         {

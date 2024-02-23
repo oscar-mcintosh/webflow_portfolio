@@ -133,7 +133,9 @@
     useHead({
         title: 'My portfolio | Home',
         meta: [
-            { name: 'description', content: 'Frontend Webdeveloper in Lincoln Nebraska'}
+            { name: 'description', 
+            content: 'Experienced, Webflow, Frontend Web Developer in Lincoln, Nebraska, crafting engaging online experiences. Transforming designs into seamless, responsive websites. Let\'s bring your digital vision to life! Contact me for expert frontend development.'
+            }
         ]
     })
 
