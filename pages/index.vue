@@ -13,14 +13,18 @@
                         </div>
                     </div>
                     <ul class="home__social">
-                        <a href="https://www.linkedin.com/in/oscar-mcintosh/" target="_blank" class="home__social-link">
-                                    <span class="link__name">Linkedin</span>
-                            <i class="ri-linkedin-box-line"></i>
-                        </a>
-                        <a href="https://github.com/oscar-mcintosh" target="_blank" class="home__social-link">
-                                    <span class="link__name">Github</span>
-                            <i class="ri-github-line"></i>
-                        </a>
+                        <li>
+                            <a href="https://www.linkedin.com/in/oscar-mcintosh/" target="_blank" class="home__social-link">
+                                        <span class="link__name">Linkedin</span>
+                                <i class="ri-linkedin-box-line"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/oscar-mcintosh" target="_blank" class="home__social-link">
+                                        <span class="link__name">Github</span>
+                                <i class="ri-github-line"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div class="home__info">
@@ -137,7 +141,7 @@
         <!--==================== PROJECTS ====================-->
         <section class="projects section" id="projects">
             <h2 class="section__title">Projects</h2>
-            <span class="section__subtitle">Most recent personal projects</span>
+            <!-- <span class="section__subtitle">Most recent personal projects</span> -->
             <div class="projects__container container grid section__border">
                 <article v-for="(project, idx) in projectStore.projects"
                         :key="idx">
@@ -149,7 +153,7 @@
         <!--==================== CONTACT ====================-->
          <section class="contact section" id="contact">
             <h2 class="section__title">Contact Me</h2>
-            <span class="section__subtitle">Get in touch</span>
+            <!-- <span class="section__subtitle">Get in touch</span> -->
             <ContactForm/>
          </section>
 
@@ -218,10 +222,6 @@ onMounted(() => {
 <style scoped>
 article{
     margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
 }
 
 </style>

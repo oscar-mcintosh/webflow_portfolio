@@ -17,15 +17,21 @@
       </ul>
 
       <ul class="footer__social">
-        <a href="www.linkedin.com/in/oscar-mcintosh" target="_blank" class="footer__social-link">
-          <i class="ri-linkedin-box-line"></i>
-        </a>
-        <a href="https://github.com/oscar-mcintosh/oscar-mcintosh" target="_blank" class="footer__social-link">
-          <i class="ri-github-line"></i>
-        </a>
-        <a href="#" target="_blank" class="footer__social-link">
-          <i class="ri-facebook-line"></i>
-        </a>
+        <li>
+          <a href="www.linkedin.com/in/oscar-mcintosh" target="_blank" class="footer__social-link">
+            <i class="ri-linkedin-box-line"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/oscar-mcintosh/oscar-mcintosh" target="_blank" class="footer__social-link">
+            <i class="ri-github-line"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" class="footer__social-link">
+            <i class="ri-facebook-line"></i>
+          </a>
+        </li>
       </ul>
 
       <span class="footer__copy">

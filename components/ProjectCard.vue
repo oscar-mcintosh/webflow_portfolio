@@ -4,12 +4,17 @@
         <!-- <i class="ri-arrow-right-circle-line projects__icon"></i> -->
     </NuxtLink>
 
+<div class="project__info">
     <NuxtLink :to="`/projects/${project.id}`" class="link">
 
-        <h2 class="projects__title">{{ project.name }}</h2>
+        <h3 class="projects__title">{{ project.name }}</h3>
     </NuxtLink>
+    <NuxtLink :to="`/projects/${project.id}`" class="button">
+        View
+    </NuxtLink>
+</div>
 
-    <span class="projects__subtitle">{{ project.subtitle }}</span>
+    <!-- <span class="projects__subtitle">{{ project.subtitle }}</span> -->
 
 </template>
 
@@ -26,12 +31,17 @@ const { project } = defineProps(['project'])
     object-fit: cover;
 }
 
-.projects__content h3{
-    color: rgb(26,115,232);
+.project__info h3{
+    color: var(--text-color);
+    /* color: rgb(26,115,232); */
 }
 
 .link:hover{
     color: rgb(26,115,232);
 
+}
+
+.project__info{
+    display: inline-block;
 }
 </style>
