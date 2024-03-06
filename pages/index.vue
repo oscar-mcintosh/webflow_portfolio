@@ -162,7 +162,11 @@
     import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
     gsap.registerPlugin(ScrollTrigger);
-
+    const { $posthog } = useNuxtApp()
+    if ($posthog) {
+        const posthog = $posthog()
+        posthog.capture('<event_name>')
+    }
     const projectStore = useProjectStore();
 
     const getProject =  projectStore.getProject();
