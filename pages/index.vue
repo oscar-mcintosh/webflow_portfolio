@@ -131,7 +131,7 @@
     const getProject =  projectStore.getProject();
 
     useHead({
-        title: 'My portfolio | Home',
+        title: 'TwoFortyTwo | Home',
         meta: [
             { name: 'description', 
             content: 'Experienced, Webflow, Frontend, Web Developer in Lincoln, Nebraska, crafting engaging online experiences. Transforming designs into seamless, responsive websites. Let\'s bring your digital vision to life! Contact me for expert frontend website development.'
