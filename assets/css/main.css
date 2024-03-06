@@ -815,6 +815,11 @@ body.dark-theme {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .projects__container{
+    justify-content: center;
+  }
+
+
   .projects__img{
     width: 200px;
     justify-self: center;

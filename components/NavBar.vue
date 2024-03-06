@@ -1,5 +1,5 @@
 <template>
-    <header class="header" id="header">
+    <!-- <header class="header" id="header"> -->
         <nav class="nav container" :class="{ 'hidden': isScrolling }">
             <NuxtLink to="/" class="nav__logo">
             <span class="link__name">Home</span>
@@ -45,7 +45,7 @@
                 </div>
             </div>
         </nav>
-    </header>  
+    <!-- </header>   -->
 </template>
 
 <script setup>
@@ -88,4 +88,6 @@
     transform: translateY(-100%);
     display: none;
     }
+
+
 </style>
