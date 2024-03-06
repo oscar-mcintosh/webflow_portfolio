@@ -138,7 +138,7 @@
         <section class="projects section" id="projects">
             <h2 class="section__title">Projects</h2>
             <span class="section__subtitle">Most recent personal projects</span>
-            <div class="projects__container container grid">
+            <div class="projects__container container grid section__border">
                 <article v-for="(project, idx) in projectStore.projects"
                         :key="idx">
                     <ProjectCard :project="project" />
@@ -146,7 +146,12 @@
             </div>
         </section>
 
-
+        <!--==================== CONTACT ====================-->
+         <section class="contact section" id="contact">
+            <h2 class="section__title">Contact Me</h2>
+            <span class="section__subtitle">Get in touch</span>
+            <ContactForm/>
+         </section>
 
     </main>
 </template>

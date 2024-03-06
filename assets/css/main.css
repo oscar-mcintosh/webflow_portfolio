@@ -172,7 +172,9 @@ body.dark-theme {
   background-color: hsl(207, 4%, 15%);
 }
 .dark-theme::-webkit-scrollbar-thumb{
-  background-color: hsl(207, 4%, 25%);
+  background-color: var(--text-color);
+
+  /* background-color: hsl(207, 4%, 25%); */
 }
 .dark-theme::-webkit-scrollbar:hover{
   background-color: hsl(207, 4%, 35%);
@@ -777,7 +779,8 @@ body.dark-theme {
 }
 
 ::-webkit-scrollbar-thumb{
-  background-color: hsl(207, 4% 65%);
+  background-color: var(--text-color);
+
   border-radius: .5rem;
 }
 
