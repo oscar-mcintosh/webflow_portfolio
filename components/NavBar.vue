@@ -106,8 +106,5 @@
     transform: translateY(-100%);
     display: none;
     }
-.animate{
-    opacity: 0;
-}
 
 </style>

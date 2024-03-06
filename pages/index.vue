@@ -5,7 +5,7 @@
                 <div class="home__data grid">
                     <h1 class="home__title">
                         <!-- Oscar McIntosh<br> -->
-                       <span class="home__title-1">Oscar</span> <span class="home__title-2">Mcintosh</span>
+                       <span class="home__title-1 home-title">Oscar</span> <span class="home__title-2 home-title">Mcintosh</span>
                     </h1>
                     <div class="home__blob grid">
                         <div class="home__perfil">
@@ -28,6 +28,34 @@
                 </div>
             </div>
         </section>
+
+         <!--==================== ABOUT ====================-->
+         <section class="about section" id="about">
+            <div class="about__container container grid section__border">
+                <div class="about__data">
+                    <h2 class="section__title">
+                        About <span>Me</span>
+                        <span class="section__subtitle"></span>
+                    </h2>
+                    <p class="about__description">
+                        Hello! My name is Oscar McIntosh. I'm an experienced Frontend Web Developer based in the heart of Lincoln, Nebraska, with a passion for crafting beautiful and functional websites. With six years of hands-on experience under my belt, I've honed my skills in HTML, CSS, JavaScript, and Vue.js to perfection.
+                    </p>
+                    <p class="about__description">
+                        My specialization lies in Webflow, where I bring creativity and precision together to bring concepts to life. From sleek designs to seamless user experiences, I thrive on turning visions into reality, pixel by pixel.
+                    </p>
+                    <p class="about__description">
+                        Beyond coding, I'm well-versed in the intricacies of SEO, leveraging tools like Google Analytics and Tag Manager to optimize website performance and drive organic traffic. I believe in the power of data-driven decisions, ensuring that every aspect of a project is strategically crafted for success.
+                    </p>
+                    <p class="about__description">
+                        In every project I undertake, my goal is simple: to create web experiences that not only meet but exceed expectations. Whether it's a personal blog or a corporate website, I approach each task with enthusiasm, attention to detail, and a commitment to excellence.
+                    </p>
+                    <p class="about__description">
+                        Let's collaborate and transform your digital presence into something truly extraordinary.
+                    </p>
+                    <a href="#contact" class="button">Contact Me</a>
+                </div>
+            </div>
+         </section>
 
         <!--==================== EXPERIENCE ====================-->
         <section class="skills section" id="skills">
@@ -125,6 +153,10 @@
 
 <script setup>
     import { useProjectStore } from '/stores/projectStore';
+    import gsap from 'gsap'; 
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+    gsap.registerPlugin(ScrollTrigger);
 
     const projectStore = useProjectStore();
 
@@ -136,9 +168,41 @@
             { name: 'description', 
             content: 'Experienced, Webflow, Frontend, Web Developer in Lincoln, Nebraska, crafting engaging online experiences. Transforming designs into seamless, responsive websites. Let\'s bring your digital vision to life! Contact me for expert frontend website development.'
             }
+        ],
+        meta: [
+            { name: 'keywords', 
+            content: 'Webflow, Frontend, Web Developer, Lincoln, Nebraska.'
+            }
         ]
-    })
 
+    })
+const main = ref();
+let ctx;
+
+onMounted(() => {
+  const fadeInElements = () => {
+    const image = document.querySelector('.home__perfil'); // Select the image element
+    const text = document.querySelectorAll('.home-title'); // Select the text element
+    
+    // Use GSAP to fade in the image and text
+    gsap.from(image, {
+      duration: 1.5,
+      opacity: 0,
+      ease: "power2.out"
+    });
+
+    gsap.from(text, {
+      duration: 1.6,
+      ease: "power2.out",
+      opacity: 0,
+      delay: 0.8 // Adding a slight delay for a staggered effect
+    });
+  };
+
+
+  fadeInElements(); // Trigger the fading in of elements
+
+});
 
 </script>
 

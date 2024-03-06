@@ -106,6 +106,21 @@ a {
   text-decoration: none;
 }
 
+.button {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 42.5px;
+  cursor: pointer;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  -webkit-box-shadow: none!important;
+  box-shadow: none!important;
+  outline: 0 !important;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -413,6 +428,12 @@ body.dark-theme {
   color: var(--title-color);
   padding-right: 4rem;
 }
+
+/*=============== About ===============*/
+.about__description{
+  margin-bottom: 2rem;
+}
+
 
 /*=============== SKILLS ===============*/
 .skills__container{
@@ -979,6 +1000,11 @@ body.dark-theme {
 }
 
 @media screen and (min-width: 1200px){
+  .button {
+    height: 85px;
+    line-height: 70px;
+    padding: 0.375rem 0.75rem;
+}
   .section__border{
     padding-bottom: 6rem;
   }
