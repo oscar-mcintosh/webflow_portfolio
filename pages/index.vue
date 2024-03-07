@@ -42,7 +42,7 @@
                         <span class="section__subtitle"></span>
                     </h2>
                     <p class="about__description">
-                        Hello! My name is Oscar McIntosh. I'm an experienced Frontend Web Developer based in the heart of Lincoln, Nebraska, with a passion for crafting beautiful and functional websites. With six years of hands-on experience under my belt, I've honed my skills in HTML, CSS, JavaScript, and Vue.js to perfection.
+                        Hello! My name is Oscar McIntosh. I'm a contract Frontend Web Developer based in the heart of Lincoln, Nebraska, with a passion for crafting beautiful and functional websites. With six years of hands-on experience under my belt, I've honed my skills in HTML, CSS, JavaScript, and Vue.js to perfection.
                     </p>
                     <p class="about__description">
                         My specialization lies in Webflow, where I bring creativity and precision together to bring concepts to life. From sleek designs to seamless user experiences, I thrive on turning visions into reality, pixel by pixel.
@@ -194,21 +194,16 @@ let ctx;
 
 onMounted(() => {
   const fadeInElements = () => {
-    const image = document.querySelector('.home__perfil'); // Select the image element
+    // const image = document.querySelector('.home__perfil'); 
     const text = document.querySelectorAll('.home-title'); // Select the text element
     
-    // Use GSAP to fade in the image and text
-    gsap.from(image, {
-      duration: 1.5,
-      opacity: 0,
-      ease: "power2.out"
-    });
 
     gsap.from(text, {
       duration: 1.6,
       ease: "power2.out",
-      opacity: 0,
-      delay: 0.8 // Adding a slight delay for a staggered effect
+      y: 50,
+      stagger: 0.3,
+      delay: 0.3 // Adding a slight delay for a staggered effect
     });
   };
 
@@ -222,6 +217,34 @@ onMounted(() => {
 <style scoped>
 article{
     margin-bottom: 30px;
+}
+.home__perfil{
+    animation: fadeIn 1s ease-in-out
+}
+
+.home-title{
+    animation: fade 1s ease-in-out
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 </style>

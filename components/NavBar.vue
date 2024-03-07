@@ -85,7 +85,7 @@
         gsap.from(navLinks, {
         duration: 1, // Animation duration in seconds
         y: -100, // Move 100px on the y-axis (negative value moves upwards)
-        opacity: 0, // Optional: Fade in during the animation
+        // opacity: 0, 
         stagger: 0.2 // Optional: Stagger the animation for a nicer effect
         });
     };
@@ -106,5 +106,19 @@
     transform: translateY(-100%);
     display: none;
     }
+
+.animate{
+    animation: fade 2s ease-in-out
+
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 </style>

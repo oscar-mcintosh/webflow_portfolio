@@ -1,6 +1,6 @@
 <template>
         <div class="nav__buttons">
-          <i @click="toggleTheme" class="ri-moon-line change-theme" id="theme-button"></i>
+          <i @click="toggleTheme" class="ri-moon-line change-theme animate" id="theme-button"></i>
         </div>
 
 </template>
@@ -47,6 +47,19 @@
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
+.animate{
+    animation: fade 2s ease-in-out
+
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 </style>
