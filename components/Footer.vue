@@ -27,11 +27,6 @@
             <i class="ri-github-line"></i>
           </a>
         </li>
-        <li>
-          <a href="#" target="_blank" class="footer__social-link">
-            <i class="ri-facebook-line"></i>
-          </a>
-        </li>
       </ul>
 
       <span class="footer__copy">

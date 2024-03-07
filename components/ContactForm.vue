@@ -5,15 +5,15 @@
                 <i class="ri-chat-3-line"></i>Talk to me
             </h3>
             <div class="contact__info">
-                <div class="contact__data">
-                    <span class="contact__data-title">Email</span>
-                    <span class="contact__data-info">oscarmcintosh1@gmail.com</span>
-                </div>
-                <div class="contact__data">
+                <!-- <div class="contact__data">
+                    <span class="contact__data-title">Phone</span>
+                    <span class="contact__data-info"></span>
+                </div> -->
+                <!-- <div class="contact__data">
                     <span class="contact__data-title">Email</span>
                     <span class="contact__data-info">oscarmcintosh1@gmail.com</span>
 
-                </div>
+                </div> -->
 
             </div>
         </div>

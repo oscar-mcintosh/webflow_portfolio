@@ -390,7 +390,7 @@ body.dark-theme {
 }
 
 .home__perfil{
-  height: 100%;
+  height: auto;
 }
 
 .home__perfil img{
@@ -632,7 +632,7 @@ body.dark-theme {
 
 .contact__data-title{
   font-size: var(--small-font-size);
-  color: var(--text-color-light);
+  color: var(--title-color);
 }
 
 .contact__data-info{
@@ -774,7 +774,7 @@ body.dark-theme {
   display: block;
   margin-top: 4.5rem;
   font-size: var(--smaller-font-size);
-  color: var(--text-color-light);
+  color: var(--text-color);
 }
 
 /*=============== SCROLL BAR ===============*/
@@ -1030,7 +1030,7 @@ body.dark-theme {
   } 
 
   .home__perfil{
-    height: 100%;
+    height: auto;
   }
   
 
