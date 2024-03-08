@@ -9,7 +9,9 @@
 
         <h3 class="projects__title">{{ project.name }}</h3>
     </NuxtLink>
-    <NuxtLink :to="`/projects/${project.id}`" class="button">
+    <p class="projects__subtitle">{{ project.subtitle }}</p>
+
+    <NuxtLink :to="`/projects/${project.id}`" class="link">
         View
     </NuxtLink>
 </div>
@@ -32,7 +34,8 @@ const { project } = defineProps(['project'])
 }
 
 .project__info h3{
-    color: var(--text-color);
+    color: var(--title-color);
+    font-size: var(--normal-font-size);
     /* color: rgb(26,115,232); */
 }
 

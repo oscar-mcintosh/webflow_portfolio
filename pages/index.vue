@@ -1,37 +1,52 @@
 <template>
     <main class="main">
+        <!--==================== HOME ====================-->
+
         <section class="home section" id="home">
-            <div class="home__container container grid section__border">
-                <div class="home__data grid">
-                    <h1 class="home__title">
-                        <!-- Oscar McIntosh<br> -->
-                       <span class="home__title-1 home-title">Oscar</span> <span class="home__title-2 home-title">Mcintosh</span>
-                    </h1>
-                    <div class="home__blob grid">
-                        <div class="home__perfil">
-                            <img src="~/assets/images/portfolio_pic.webp" alt="picture of man staring" />
+            <div class="container">
+                <div class="home__container grid">
+                    <div class="home__info">
+                        <div class="home__info-content">
+                            <h1 class="home__title home__title-1">Oscar</h1>
+                            <h1 class="home__title home__title-1">McIntosh</h1>
+                            <p class="home__title-1">Frontend Webdeveloper and Contractor</p>
                         </div>
                     </div>
+
+                    <div class="home__data grid">
+                        <div class="home__blob">
+                            <div class="home__perfil">
+                                <img src="~/assets/images/portfolio_pic.webp" alt="picture of man staring" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="home__social-wrap">
+                    <div class="image-half-round-shape"></div>
                     <ul class="home__social">
-                        <li>
-                            <a href="https://www.linkedin.com/in/oscar-mcintosh/" target="_blank" class="home__social-link">
-                                        <span class="link__name">Linkedin</span>
+                        <li class="home__social-link">
+                            <a href="www.linkedin.com/in/oscar-mcintosh" target="_blank">
                                 <i class="ri-linkedin-box-line"></i>
                             </a>
                         </li>
-                        <li>
-                            <a href="https://github.com/oscar-mcintosh" target="_blank" class="home__social-link">
-                                        <span class="link__name">Github</span>
+                        
+                        <li class="wave-btn">
+                            <div class="ripple"><i class="ri-arrow-down-s-line"></i></div>
+
+                        </li>
+                        <li class="home__social-link">
+                            <a href="https://github.com/oscar-mcintosh" target="_blank">
                                 <i class="ri-github-line"></i>
                             </a>
                         </li>
+
+
                     </ul>
                 </div>
-                <div class="home__info">
-
-                </div>
             </div>
+
         </section>
+
 
          <!--==================== ABOUT ====================-->
          <section class="about section" id="about">
@@ -42,7 +57,7 @@
                         <span class="section__subtitle"></span>
                     </h2>
                     <p class="about__description">
-                        Hello! My name is Oscar McIntosh. I'm a contract Frontend Web Developer based in the heart of Lincoln, Nebraska, with a passion for crafting beautiful and functional websites. With six years of hands-on experience under my belt, I've honed my skills in HTML, CSS, JavaScript, and Vue.js to perfection.
+                        Hello! My name is Oscar McIntosh. I'm a Freelance and Contract Frontend Web Developer based in the heart of Lincoln, Nebraska, and passion for crafting beautiful and functional websites. With six years of hands-on experience under my belt, I've honed my skills in HTML, CSS, JavaScript, and Vue.js.
                     </p>
                     <p class="about__description">
                         My specialization lies in Webflow, where I bring creativity and precision together to bring concepts to life. From sleek designs to seamless user experiences, I thrive on turning visions into reality, pixel by pixel.
@@ -61,9 +76,9 @@
             </div>
          </section>
 
-        <!--==================== EXPERIENCE ====================-->
+        <!--==================== SKILLS ====================-->
         <section class="skills section" id="skills">
-            <h2 class="section__title">Experience</h2>
+            <h2 class="section__title">Skills</h2>
             <span class="section__subtitle"></span>
 
             <div class="skills__container container grid section__border">
@@ -141,7 +156,7 @@
         <!--==================== PROJECTS ====================-->
         <section class="projects section" id="projects">
             <h2 class="section__title">Projects</h2>
-            <!-- <span class="section__subtitle">Most recent personal projects</span> -->
+            <span class="section__subtitle"></span>
             <div class="projects__container container grid section__border">
                 <article v-for="(project, idx) in projectStore.projects"
                         :key="idx">
@@ -156,6 +171,8 @@
             <!-- <span class="section__subtitle">Get in touch</span> -->
             <ContactForm/>
          </section>
+
+
 
     </main>
 </template>
@@ -195,14 +212,14 @@ let ctx;
 onMounted(() => {
   const fadeInElements = () => {
     // const image = document.querySelector('.home__perfil'); 
-    const text = document.querySelectorAll('.home-title'); // Select the text element
+    const text = document.querySelectorAll('.home__title-1'); // Select the text element
     
 
     gsap.from(text, {
-      duration: 1.6,
-      ease: "power2.out",
-      y: 50,
-      stagger: 0.3,
+      duration: 2,
+      ease: "power4.out",
+      y: 65,
+      stagger: 0.2,
       delay: 0.3 // Adding a slight delay for a staggered effect
     });
   };
@@ -222,7 +239,7 @@ article{
     animation: fadeIn 1s ease-in-out
 }
 
-.home-title{
+.home__title-1{
     animation: fade 1s ease-in-out
 }
 
@@ -239,9 +256,9 @@ article{
     50%{
         opacity: 0;
     }
-    75%{
+    /* 75%{
         opacity: 0;
-    }
+    } */
     100%{
         opacity: 1;
     }

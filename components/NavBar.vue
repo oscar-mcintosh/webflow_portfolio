@@ -7,13 +7,13 @@
             <div :class="{ 'show-menu': isNavMenuVisible }" class="nav__menu" id="nav-menu">
                 <ul  class="nav__list grid">
                     <li class="nav__item" @click="closeNavMenu">
-                    <NuxtLink to="/" class="nav__link animate">
-                        <i class="ri-home-5-line"></i>Home
+                    <NuxtLink to="#about" class="nav__link animate">
+                        <i class="ri-home-5-line"></i>About
                     </NuxtLink>
                     </li>
                     <li class="nav__item" @click="closeNavMenu">
                     <NuxtLink to="#skills" class="nav__link animate">
-                        <i class="ri-trophy-line"></i>Experience
+                        <i class="ri-trophy-line"></i>Skills
                     </NuxtLink>
                     </li>
                     <li class="nav__item" @click="closeNavMenu">
@@ -22,15 +22,16 @@
                     </NuxtLink>
                     </li>
                     <li class="nav__item" @click="closeNavMenu">
-                        <NuxtLink to="https://github.com/oscar-mcintosh" target="_blank" class="nav__link animate">
-                            <i class="ri-github-line"></i>Github
-                        </NuxtLink>
-                    </li>
-                    <li class="nav__item" @click="closeNavMenu">
                     <NuxtLink to="#contact" class="nav__link animate">
                         <i class="ri-chat-3-line"></i>Contact
                     </NuxtLink>
                     </li>
+                    <li class="nav__item" @click="closeNavMenu">
+                        <NuxtLink to="https://github.com/oscar-mcintosh" target="_blank" class="nav__link animate">
+                            <i class="ri-github-line"></i>Github
+                        </NuxtLink>
+                    </li>
+
                 </ul>
                 <div  @click="closeNavMenu" class="nav__close" id="nav-close">
                     <i class="ri-close-line"></i>
