@@ -115,7 +115,7 @@
     transform: translate(-50%, -50%);
 } */
 .main{
-    top:60px
+    margin-top: 1.5rem;
 }
 .row{
     display: flex;

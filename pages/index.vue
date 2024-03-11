@@ -83,7 +83,7 @@
 
             <div class="skills__container container grid section__border">
 
-                <div class="skills__content">
+                <div class="skills__content" data-animate="fadeup">
                     <h3 class="skills__title">
                         <i class="ri-braces-line"></i>Frontend Developer
                     </h3>
@@ -120,7 +120,7 @@
                     </div>
                 </div>
 
-                <div class="skills__content">
+                <div class="skills__content" data-animate="fadeup">
                     <h3 class="skills__title">
                         <i class="ri-database-2-line"></i>CMS' and other tools
                     </h3>
