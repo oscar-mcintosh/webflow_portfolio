@@ -21,7 +21,7 @@
             <h3 class="contact__title">
                 <i class="ri-send-plane-line"></i>If you have a project or need help, contact me.
             </h3>
-            <form name="contact" netlify method="POST" data-netlify-recaptcha="true" data-netlify="true" class="contact__form" id="contact-form">
+            <form name="contact" hidden netlify method="POST" data-netlify-recaptcha="true" data-netlify="true" class="contact__form" id="contact-form">
                 <div class="contact__form-div">
                     <label class="contact__form-tag">Name</label>
                     <input type="text" name="name" required placeholder="Your name" class="contact__form-input" id="contact-name">
