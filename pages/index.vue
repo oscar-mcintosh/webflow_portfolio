@@ -168,8 +168,7 @@
         <!--==================== CONTACT ====================-->
          <section class="contact section" id="contact">
             <h2 class="section__title">Contact Me</h2>
-            <!-- <span class="section__subtitle">Get in touch</span> -->
-            <!-- <ContactForm/> -->
+            <ContactForm/>
          </section>
 
 
