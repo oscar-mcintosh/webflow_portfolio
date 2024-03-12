@@ -19,7 +19,7 @@
         </div>
         <div class="contact__content">
             <h3 class="contact__title">
-                <i class="ri-send-plane-line"></i>If you have a porject or need help, contact me.
+                <i class="ri-send-plane-line"></i>If you have a project or need help, contact me.
             </h3>
             <form name="contact" netlify method="POST" data-netlify-recaptcha="true" data-netlify="true" class="contact__form" id="contact-form">
                 <div class="contact__form-div">
