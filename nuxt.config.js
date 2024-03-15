@@ -28,7 +28,15 @@ export default defineNuxtConfig({
           rel: 'stylesheet',
           href: 'https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css'
         }
+      ],
+      script: [
+        {
+          src: 'https://web3forms.com/client/script.js',
+          async: true,
+          defer: true
+        }
       ]
+
     }
   },
   css: ['~/assets/css/main.css'],

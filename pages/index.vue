@@ -7,9 +7,10 @@
                 <div class="home__container grid">
                     <div class="home__info">
                         <div class="home__info-content">
+                            <p class="home__title-1">Webflow Professional</p>
                             <h1 class="home__title home__title-1">Oscar</h1>
                             <h1 class="home__title home__title-1">McIntosh</h1>
-                            <p class="home__title-1">Frontend Webdeveloper and Contractor</p>
+                            <p class="home__title-1">Freelancer and subcontractor</p>
                         </div>
                     </div>
 
@@ -93,28 +94,28 @@
                                 <img src="~/assets/images/html-1.svg" alt="skills image">
                             </div>
                             <h3 class="skills__name">HTML</h3>
-                            <span class="skills__subtitle"></span>
+                            <span class="projects__subtitle">Five years</span>
                         </div>
                         <div class="skills__data">
                             <div class="skills__blob">
                                 <img src="~/assets/images/css-3.svg" alt="skills image">
                             </div>
                             <h3 class="skills__name">CSS</h3>
-                            <span class="skills__subtitle"></span>
+                            <span class="projects__subtitle">Five years</span>
                         </div>
                         <div class="skills__data">
                             <div class="skills__blob">
                                 <img src="~/assets/images/logo-javascript.svg" alt="skills image">
                             </div>
                             <h3 class="skills__name">Javascript</h3>
-                            <span class="skills__subtitle"></span>
+                            <span class="projects__subtitle">Five years</span>
                         </div>
                         <div class="skills__data">
                             <div class="skills__blob">
                                 <img src="~/assets/images/vue-9.svg" alt="skills image">
                             </div>
                             <h3 class="skills__name">Vue JS</h3>
-                            <span class="skills__subtitle"></span>
+                            <span class="projects__subtitle">Five years</span>
                         </div>
 
                     </div>
@@ -130,21 +131,21 @@
                                 <img src="~/assets/images/git-icon.svg" alt="skills image">
                             </div>
                             <h3 class="skills__name">GIT</h3>
-                            <span class="skills__subtitle"></span>
+                            <span class="projects__subtitle">Three years</span>
                         </div>
                         <div class="skills__data">
                             <div class="skills__blob">
                                 <img src="~/assets/images/wordpress-icon-1.svg" alt="skills image">
                             </div>
                             <h3 class="skills__name">Wordpress</h3>
-                            <span class="skills__subtitle"></span>
+                            <span class="projects__subtitle">Four years</span>
                         </div>
                         <div class="skills__data">
                             <div class="skills__blob">
                                 <img src="~/assets/images/webflow-icon.svg" alt="skills image">
                             </div>
                             <h3 class="skills__name">Webflow</h3>
-                            <span class="skills__subtitle"></span>
+                            <span class="projects__subtitle">Five years</span>
                         </div>
 
                     </div>
