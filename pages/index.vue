@@ -154,6 +154,116 @@
             </div>
         </section>
 
+        <!--==================== SKILLS2 UI FOR LARGER SCREENS ====================-->
+        <section class="skills2 section" id="skills">
+            <h2 class="section__title">Skills</h2>
+            <span class="section__subtitle"></span>
+
+            <div class=" container flex section__border">
+                <div class="skills__content" data-animate="fadeup">
+                    <h3 class="skills__title">
+                        <i class="ri-braces-line"></i>Frontend Developer
+                    </h3>
+                    <div class="skills__info2 p-t">
+                        <div class="skills__data2">
+                            <div class="skills__data p-l">
+                                <h3 class="skills__name">HTML</h3>
+                                <span class="projects__subtitle">Five years</span>
+                            </div>
+                            <div class="skills__blob2 s1">
+                                <img src="~/assets/images/html-1.svg" alt="skills image">
+                            </div>
+                        </div>
+                        <div class="skills__data2">
+                            <div class="skills__data">
+                                <h3 class="skills__name">CSS</h3>
+                                <span class="projects__subtitle">Five years</span>
+                            </div>
+                            <div class="skills__blob2 s2">
+                                <img src="~/assets/images/css-3.svg" alt="skills image">
+                            </div>
+                        </div>
+                        <div class="skills__data2">
+                            <div class="skills__data">
+                                <h3 class="skills__name">Javascript</h3>
+                                <span class="projects__subtitle">Five years</span>
+                            </div>
+                            <div class="skills__blob2 s3">
+                                <img src="~/assets/images/logo-javascript.svg" alt="skills image">
+                            </div>
+                        </div>
+                        <div class="skills__data2">
+                            <div class="skills__data p-l">
+                                <h3 class="skills__name">Vue JS</h3>
+                                <span class="projects__subtitle">Five years</span>
+                            </div>
+                            <div class="skills__blob2 s4">
+                                <img src="~/assets/images/vue-9.svg" alt="skills image">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                    <div class="skills__blob-large">
+                        <div class="skills__blob-inset">
+                            <div class="skills__blob-inset-img">
+                                <img src="~/assets/images/logo2.svg" alt="242 logo">
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="skills__content" data-animate="fadeup">
+                    <h3 class="skills__title">
+                        <i class="ri-database-2-line"></i>CMS' and other tools
+                    </h3>
+                    <div class="skills__info2 p-t">
+                        <div class="skills__data2">
+                            <div class="skills__blob2 s5">
+                                <img src="~/assets/images/git-icon.svg" alt="skills image">
+                            </div>
+                            <div class="skills__data p-r">
+                                <h3 class="skills__name">GIT</h3>
+                                <span class="projects__subtitle">Three years</span>
+                            </div>
+
+                        </div>
+                        <div class="skills__data2">
+                            <div class="skills__blob2 s6">
+                                <img src="~/assets/images/wordpress-icon-1.svg" alt="skills image">
+                            </div>
+                            <div class="skills__data p-l">
+                                <h3 class="skills__name">Wordpress</h3>
+                                <span class="projects__subtitle">Four years</span>
+                            </div>
+                        </div>
+                        <div class="skills__data2">
+                            <div class="skills__blob2 s7">
+                                <img src="~/assets/images/webflow-icon.svg" alt="skills image">
+                            </div>
+                            <div class="skills__data p-r p-l">
+                                <h3 class="skills__name">Webflow</h3>
+                                <span class="projects__subtitle">Five years</span>
+                            </div>
+                        </div>
+
+                         <div class="skills__data2 p-r">
+                            <div class="skills__blob2 s8">
+                                <img src="~/assets/images/google-search-ads.svg" alt="skills image">
+                            </div>
+                            <div class="skills__data">
+                                <h3 class="skills__name">SEO</h3>
+                                <span class="projects__subtitle">Five years</span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
         <!--==================== PROJECTS ====================-->
         <section class="projects section" id="projects">
             <h2 class="section__title">Projects</h2>
