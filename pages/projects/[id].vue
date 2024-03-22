@@ -137,7 +137,7 @@
 }
 
 .project-hero-image {
-    margin-bottom: 65px;
+    margin: 40px 0 65px;
     overflow: hidden;
 
     /* width: 100%;
@@ -147,7 +147,6 @@
 .project-hero-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 
 .row>* {

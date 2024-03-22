@@ -1,5 +1,5 @@
 <template>
-<div data-animate="fadeup">
+<div>
     <NuxtLink :to="`/projects/${project.id}`" class="projects__link">
         <img :src="project.image" :alt="project.name" class="projects__img"> 
         <!-- <i class="ri-arrow-right-circle-line projects__icon"></i> -->

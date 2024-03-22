@@ -78,8 +78,8 @@
          </section>
 
         <!--==================== SKILLS ====================-->
-        <section class="skills section" id="skills">
-            <h2 class="section__title">Skills</h2>
+        <section class="skills section" id="experience">
+            <h2 class="section__title">Experience</h2>
             <span class="section__subtitle"></span>
 
             <div class="skills__container container grid section__border">
@@ -155,8 +155,8 @@
         </section>
 
         <!--==================== SKILLS2 UI FOR LARGER SCREENS ====================-->
-        <section class="skills2 section" id="skills">
-            <h2 class="section__title">Skills</h2>
+        <section class="skills2 section" id="experience2">
+            <h2 class="section__title">Experience</h2>
             <span class="section__subtitle"></span>
 
             <div class=" container flex section__border">
@@ -264,16 +264,15 @@
         </section>
 
 
-        <!--==================== PROJECTS ====================-->
-        <section class="projects section" id="projects">
-            <h2 class="section__title">Projects</h2>
+        <!--==================== PORTFOLIO ====================-->
+
+        <section class="projects section" id="portfolio">
+            <h2 class="section__title">Portfolio</h2>
             <span class="section__subtitle"></span>
-            <div class="projects__container container grid section__border">
-                <article v-for="(project, idx) in projectStore.projects"
-                        :key="idx">
-                    <ProjectCard :project="project" />
-                </article>
+            <div>
+                    <ProjectFilter />
             </div>
+
         </section>
 
         <!--==================== CONTACT ====================-->

@@ -304,6 +304,9 @@ body.dark-theme {
   display: none;
 }
 
+.experience2{
+  display: none;
+}
 @media screen and (max-width: 1023px) {
     .nav__menu{
       position: fixed;
@@ -1241,9 +1244,14 @@ body.dark-theme {
     background-color: hsl(100, 100%, 99%);
   }
   
-  .skills{
+  .skills, .experience{
     display: none;
   }
+  .experience2{
+    display: block;
+  }
+  
+
   .flex{
     display: flex;
     justify-content: center;

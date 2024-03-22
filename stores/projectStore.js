@@ -31,6 +31,7 @@ export const useProjectStore = defineStore('projects', {
           status: record.fields.status,
           fullPage: record.fields.fullPage?.[0]?.url || null,
           subtitle: record.fields.subtitle,
+          category: [record.fields.categories],
         }));
 
         this.projects = listOfProjects;
