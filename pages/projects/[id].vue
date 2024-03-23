@@ -139,9 +139,9 @@
 .project-hero-image {
     margin: 40px 0 65px;
     overflow: hidden;
+    border: 2px solid var(--body-color);
+    border-radius: 10px;
 
-    /* width: 100%;
-    object-fit: contain; */
 }
 
 .project-hero-image img {

@@ -15,10 +15,27 @@
       <article
         v-for="(project, index) in filteredProjects"
         :key="index"
-        class="col-md-6 filter-item"
+        class="col-md-6 filter-item project"
         data-animate="fadeup"
       >
-        <ProjectCard :project="project"/>
+      <NuxtLink :to="`/projects/${project.id}`" class="projects__link">
+        <img :src="project.image" :alt="project.name" class="projects__img"> 
+        <!-- <i class="ri-arrow-right-circle-line projects__icon"></i> -->
+      </NuxtLink>
+
+      <div class="project__info">
+          <NuxtLink :to="`/projects/${project.id}`" class="link">
+
+              <h3 class="projects__title">{{ project.name }}</h3>
+          </NuxtLink>
+          <p class="projects__subtitle">{{ project.subtitle }}</p>
+
+          <NuxtLink :to="`/projects/${project.id}`" class="link">
+              Read More
+          </NuxtLink>
+      </div>
+
+        <!-- <ProjectCard :project="project"/> -->
       </article>
     </div>
   </div>
@@ -78,21 +95,25 @@ const isFiltered = (project) => {
 
 
 <style scoped>
-    .projects-gallery-filter-nav {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
+  .projects__img{
+    border-radius: 10px;
+  }
+
+  .projects-gallery-filter-nav {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 10px;
+  }
 
 
-    .btn-outline-secondary.active{
-        color: #fff;
-        background-color: var(--text-color-light);
-        border-color: var(--text-color-light);
-        font-weight: var(--font-semi-bold);
-    }
+  .btn-outline-secondary.active{
+      color: #fff;
+      background-color: var(--text-color-light);
+      border-color: var(--text-color-light);
+      font-weight: var(--font-semi-bold);
+  }
 
     .btn {
         display: inline-block;
