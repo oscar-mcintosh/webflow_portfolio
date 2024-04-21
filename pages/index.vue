@@ -8,8 +8,8 @@
                     <div class="home__info">
                         <div class="home__info-content">
                             <p class="home__title-1">Webflow Professional</p>
-                            <h1 class="home__title home__title-1">Oscar</h1>
-                            <h1 class="home__title home__title-1">McIntosh</h1>
+                            <h1 data-text="Oscar" class="home__title home__title-1">Oscar</h1>
+                            <h1 data-text="McIntosh" class="home__title home__title-1">McIntosh</h1>
                             <p class="home__title-1">Freelancer and subcontractor</p>
                         </div>
                     </div>

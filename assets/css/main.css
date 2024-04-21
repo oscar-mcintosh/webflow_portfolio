@@ -408,13 +408,35 @@ body.dark-theme {
 }
 
 .home__title{
+  position: relative;
   letter-spacing: .3px;
   margin-bottom: .5rem;
   font-size: 3.5rem;
   font-weight: 900;
+  color: var(--body-color);
   -webkit-text-stroke: 1px var(--text-color-light);
 }
 
+.home__title::before{
+  content: attr(data-text);
+  position: absolute;
+  /* color: var(--body-color); */
+  color: var(--title-color);
+  overflow: hidden;
+  width: 0%;
+  transition: 1s;
+  animation: fill 2s cubic-bezier(0.6, 0, 0.4, 1) forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fill {
+  0% {
+    width: 0%;
+  }
+  100%{
+    width: 100%;
+  }
+}
 
 .home__blob{
   position: relative;
