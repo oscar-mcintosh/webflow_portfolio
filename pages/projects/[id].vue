@@ -40,6 +40,13 @@
                                                             <a  :href="project.link" target="_blank">{{ project.link }}</a>
                                                         </span>
                                                     </li>
+                                                    <li class="project-sidebar-single-box">
+                                                        <h6 class="title-text">Technologies used:</h6>
+                                                        <span class="text">
+                                                            {{ project.technology }}
+                                                        </span>
+                                                    </li>
+
                                                     <li class="project-sidebar-single-box" v-if="project.github">
                                                         <h6 class="title-text">Github Link:</h6>
                                                         <span class="text">
@@ -85,6 +92,8 @@
             link: data.fields.demoLink,
             github: data.fields.githubLink,
             description: data.fields.description,
+            technology: data.fields.subtitle
+
             };
             return project;
         } catch (error) {
@@ -193,7 +202,7 @@
 
 .project-sidebar .title {
     font-size: 30px;
-    color: #fff;
+    color: var(--text-color);
     font-weight: 600;
     margin-bottom: 45px;
 }
@@ -208,9 +217,10 @@
 }
 
 .project-sidebar .project-sidebar-single-box .title-text {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     color: rgb(26,115,232);
     font-weight: var(--font-semi-bold);
+    font-family: var(--title-font);
     letter-spacing: 1px;
     margin-bottom: 20px;
 }
