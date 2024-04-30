@@ -310,7 +310,7 @@
         ],
         meta: [
             { name: 'keywords', 
-            content: 'Webflow, Frontend developer, Web Developer, Lincoln Nebraska, Webflow Developer, freelance webflow developer, lincoln.'
+            content: 'Webflow, Frontend developer, Web Developer, Lincoln Nebraska, Webflow Developer, freelance webflow developer, lincoln, ne, nebraska.'
             }
         ]
 
