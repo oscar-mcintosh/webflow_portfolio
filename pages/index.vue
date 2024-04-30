@@ -26,7 +26,7 @@
                     <div class="image-half-round-shape"></div>
                     <ul class="home__social">
                         <li class="home__social-link">
-                            <a href="www.linkedin.com/in/oscar-mcintosh" target="_blank">
+                            <a href="www.linkedin.com/in/oscar-mcintosh" aria-label="Visit my linkedin page" target="_blank">
                                 <i class="ri-linkedin-box-line"></i>
                             </a>
                         </li>
@@ -36,7 +36,7 @@
 
                         </li>
                         <li class="home__social-link">
-                            <a href="https://github.com/oscar-mcintosh" target="_blank">
+                            <a href="https://github.com/oscar-mcintosh" aria-label="Visit my Github page" target="_blank">
                                 <i class="ri-github-line"></i>
                             </a>
                         </li>

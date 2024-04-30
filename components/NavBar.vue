@@ -1,7 +1,7 @@
 <template>
     <!-- <header class="header" id="header"> -->
         <nav class="nav container" :class="{ 'hidden': isScrolling }">
-            <NuxtLink to="/" class="nav__logo animate">
+            <NuxtLink to="/" class="nav__logo animate" aria-label="logo with the numbers 242">
             <span class="link__name">Home</span>
             </NuxtLink>
             <div :class="{ 'show-menu': isNavMenuVisible }" class="nav__menu" id="nav-menu">

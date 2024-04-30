@@ -31,7 +31,7 @@
           <p class="projects__subtitle">{{ project.subtitle }}</p>
 
           <NuxtLink :to="`/projects/${project.id}`" class="link">
-              Read More
+              View Project
           </NuxtLink>
       </div>
 

@@ -37,7 +37,7 @@ export const useProjectStore = defineStore('projects', {
         this.projects = listOfProjects;
 
       } catch (error) {
-        console.error('Error fetching data:', error);
+        alert.error('Error fetching data:', error);
       }
     },
   },
