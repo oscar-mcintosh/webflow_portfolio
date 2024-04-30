@@ -10,7 +10,11 @@ export default defineNuxtConfig({
 
   modules: [
     '@pinia/nuxt',
+    '@nuxtjs/sitemap'
   ],
+  site: {
+    url: 'https://twofortytwo.dev',
+  },
   app: {
     head: {
       htmlAttrs: {
