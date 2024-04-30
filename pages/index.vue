@@ -58,7 +58,7 @@
                         <span class="section__subtitle"></span>
                     </h2>
                     <p class="about__description">
-                        Hello! My name is Oscar McIntosh. I'm a Freelance and Contract Frontend Web Developer based in the heart of Lincoln, Nebraska, and passion for crafting beautiful and functional websites. With six years of hands-on experience under my belt, I've honed my skills in HTML, CSS, JavaScript, and Vue.js.
+                        Hello! My name is Oscar McIntosh. I'm a Freelance and Contract Frontend, Webflow, Web Developer based in the heart of Lincoln, Nebraska, and passion for crafting beautiful and functional websites. With six years of hands-on experience under my belt, I've honed my skills in HTML, CSS, JavaScript, and Vue.js.
                     </p>
                     <p class="about__description">
                         My specialization lies in Webflow, where I bring creativity and precision together to bring concepts to life. From sleek designs to seamless user experiences, I thrive on turning visions into reality, pixel by pixel.
