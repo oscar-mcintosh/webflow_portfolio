@@ -17,7 +17,7 @@
                     <div class="home__data grid">
                         <div class="home__blob">
                             <div class="home__perfil">
-                                <img src="~/assets/images/portfolio_pic.webp" alt="picture of man staring" />
+                                <img fetchpriority="high" src="~/assets/images/portfolio_pic.webp" alt="picture of man staring" />
                             </div>
                         </div>
                     </div>
