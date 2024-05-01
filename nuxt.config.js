@@ -30,7 +30,8 @@ export default defineNuxtConfig({
         {
           
           rel: 'stylesheet',
-          href: 'https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css'
+          href: 'https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css',
+          defer: true
         }
       ],
       script: [
@@ -54,8 +55,8 @@ export default defineNuxtConfig({
       apiKey: process.env.API_KEY,
       apiUrl: process.env.API_URL,
       
-      posthogPublicKey: 'phc_wq7R6qivBGL3eIK1Wh7ixkTvTuCTjOV9GjVMMyKQFp1',
-      posthogHost: "https://us.posthog.com"
+      posthogPublicKey: process.env.POST_KEY,
+      posthogHost: process.env.POST_URL,
 
     }
   },
