@@ -110,8 +110,8 @@ const isFiltered = (project) => {
 
   .btn-outline-secondary.active{
       color: #fff;
-      background-color: var(--text-color-light);
-      border-color: var(--text-color-light);
+      background-color: var(--text-color);
+      border-color: var(--text-color);
       font-weight: var(--font-semi-bold);
   }
 
