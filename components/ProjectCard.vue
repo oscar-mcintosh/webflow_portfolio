@@ -56,25 +56,3 @@ onMounted(() => {
 
 </script>
 
-<style >
-.project-hero-image{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.project__info h3{
-    color: var(--title-color);
-    font-size: var(--normal-font-size);
-    /* color: rgb(26,115,232); */
-}
-
-.link:hover{
-    color: rgb(26,115,232);
-
-}
-
-.project__info{
-    display: inline-block;
-}
-</style>

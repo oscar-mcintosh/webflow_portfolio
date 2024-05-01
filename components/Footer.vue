@@ -18,12 +18,12 @@
 
       <ul class="footer__social">
         <li>
-          <a href="www.linkedin.com/in/oscar-mcintosh" target="_blank" class="footer__social-link">
+          <a href="www.linkedin.com/in/oscar-mcintosh" aria-label="Link to my linkedin page" target="_blank" class="footer__social-link">
             <i class="ri-linkedin-box-line"></i>
           </a>
         </li>
         <li>
-          <a href="https://github.com/oscar-mcintosh/oscar-mcintosh" target="_blank" class="footer__social-link">
+          <a href="https://github.com/oscar-mcintosh/oscar-mcintosh" aria-label="Link to my github page" target="_blank" class="footer__social-link">
             <i class="ri-github-line"></i>
           </a>
         </li>
