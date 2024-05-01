@@ -344,9 +344,9 @@ onMounted(() => {
 article{
     margin-bottom: 30px;
 }
-.home__perfil{
+/* .home__perfil{
     animation: fadeIn 1s ease-in-out
-}
+} */
 
 .home__title-1{
     animation: fade 1s ease-in-out
