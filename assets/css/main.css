@@ -1001,27 +1001,35 @@ body.dark-theme {
 /*=============== SCROLL UP ===============*/
 .scrollup{
   position: fixed;
-  background-color: var(--body-color);
-  color: var(--title-color);
+  background-color: var(--title-color);
+  color: var(--body-color);
   box-shadow: 0 4px 12px hsl(207, 24%, 35%, .15);
   right: 1rem;
+  /* bottom: 2rem; */
   bottom: -30%;
-  display: inline-flex;
-  padding: .35rem;
-  border-radius: .25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: .35rem; */
+  border-radius: 50%;
+
+  height: 3rem;
+  width: 3rem;
   z-index: var(--z-tooltip);
   opacity: .8;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   transition: bottom .3s transform .3s;
 }
 
 .scrollup:hover{
   transform: translateY(-.25rem);
+  cursor: pointer;
 }
 
 /* Show Scroll Up*/
 .show-scroll{
   bottom: 7.5rem;
+  transition: bottom .3s transform .3s;
 }
 
 /*=============== SCROLL UP ===============*/

@@ -2,7 +2,7 @@
     <!-- <header class="header" id="header"> -->
         <nav class="nav container" :class="{ 'hidden': isScrolling }">
             <NuxtLink to="/" class="nav__logo animate" aria-label="logo with the numbers 242">
-            <span class="link__name">Home</span>
+            <!-- <span class="link__name nav__link">Home</span> -->
             </NuxtLink>
             <div :class="{ 'show-menu': isNavMenuVisible }" class="nav__menu" id="nav-menu">
                 <ul  class="nav__list grid">
