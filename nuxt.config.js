@@ -20,11 +20,15 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'en'
       },
-      title: 'My Portfolio',
+      title: 'TwoFortyTwo Dev',
       meta: [
         { name: 'description', 
-          content: 'Experienced, Webflow, Frontend Web Developer in Lincoln, Nebraska, crafting engaging online experiences. Transforming designs into seamless, responsive websites. Let\'s bring your digital vision to life! Contact me for expert frontend development.'
-        }
+          content: 'Professional frontend web developer and Webflow expert based in Lincoln, NE. Specializing in responsive web design and custom development.'
+        },
+        { name: 'keywords', 
+        content: 'Frontend Web Developer Lincoln NE, Webflow Developer Lincoln NE, Custom Web Development Lincoln, Responsive Web Design Lincoln NE'
+      }
+
       ],
       link: [
         {

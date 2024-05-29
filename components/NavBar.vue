@@ -11,6 +11,12 @@
                         <i class="ri-home-5-line"></i>About
                     </NuxtLink>
                     </li>
+                    <li class="nav__item" @click="closeNavMenu">
+                    <NuxtLink to="#portfolio" class="nav__link animate">
+                        <i class="ri-gallery-line"></i>Portfolio
+                    </NuxtLink>
+                    </li>
+
                     <li class="nav__item experience" @click="closeNavMenu">
                     <NuxtLink to="#experience" class="nav__link animate">
                         <i class="ri-trophy-line"></i>Experience
@@ -22,11 +28,6 @@
                     </NuxtLink>
                     </li>
 
-                    <li class="nav__item" @click="closeNavMenu">
-                    <NuxtLink to="#portfolio" class="nav__link animate">
-                        <i class="ri-gallery-line"></i>Portfolio
-                    </NuxtLink>
-                    </li>
                     <li class="nav__item" @click="closeNavMenu">
                     <NuxtLink to="#contact" class="nav__link animate">
                         <i class="ri-chat-3-line"></i>Contact

@@ -77,6 +77,18 @@
             </div>
          </section>
 
+        <!--==================== PORTFOLIO ====================-->
+
+        <section class="projects section" id="portfolio">
+            <h2 class="section__title">Portfolio</h2>
+            <span class="section__subtitle"></span>
+            <div>
+                    <ProjectFilter />
+            </div>
+
+        </section>
+
+
         <!--==================== SKILLS ====================-->
         <section class="skills section" id="experience">
             <h2 class="section__title">Experience</h2>
@@ -264,16 +276,6 @@
         </section>
 
 
-        <!--==================== PORTFOLIO ====================-->
-
-        <section class="projects section" id="portfolio">
-            <h2 class="section__title">Portfolio</h2>
-            <span class="section__subtitle"></span>
-            <div>
-                    <ProjectFilter />
-            </div>
-
-        </section>
 
         <!--==================== CONTACT ====================-->
          <section class="contact section" id="contact">
@@ -302,15 +304,15 @@
     const getProject =  projectStore.getProject();
 
     useHead({
-        title: 'TwoFortyTwo | Web Developer in Lincoln, NE',
+        title: 'Frontend & Webflow Developer in Lincoln, NE',
         meta: [
             { name: 'description', 
-            content: 'Experienced, Webflow, Frontend, Web Developer in Lincoln, Nebraska, crafting engaging online experiences. Transforming designs into seamless, responsive websites. Let\'s bring your digital vision to life! Contact me for expert frontend website development.'
+            content: 'Professional frontend web developer and Webflow expert based in Lincoln, NE. Specializing in responsive web design and custom development.'
             }
         ],
         meta: [
             { name: 'keywords', 
-            content: 'Webflow, Frontend developer, Web Developer, Lincoln Nebraska, Webflow Developer, freelance webflow developer, lincoln, ne, nebraska.'
+            content: 'Frontend Web Developer Lincoln NE, Webflow Developer Lincoln NE, Custom Web Development Lincoln, Responsive Web Design Lincoln NE, SEO strategist Lincoln NE'
             }
         ]
 

@@ -1,5 +1,8 @@
 <template>
-    <div>
+    <div class="tabs">
+        <div class=" container section__border">
+        <Tabs />
+        </div>
 
     </div>
 </template>
@@ -8,6 +11,10 @@
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
+.tabs{
+    padding-top: 100px;
+    /* height: 100vh; */
+}
 
 </style>
