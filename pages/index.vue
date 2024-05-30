@@ -304,7 +304,7 @@
     const getProject =  projectStore.getProject();
 
     useHead({
-        title: 'Frontend & Webflow Developer in Lincoln, NE',
+        title: 'Web Developer & Webflow Developer in Lincoln, NE',
         meta: [
             { name: 'description', 
             content: 'Professional frontend web developer and Webflow expert based in Lincoln, NE. Specializing in responsive web design and custom development.'
