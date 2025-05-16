@@ -13,13 +13,14 @@
     "@nuxt/devtools": "latest",
     "@nuxtjs/sitemap": "^5.1.4",
     "nuxt": "^3.8.0",
-    "vue": "^3.3.7",
-    "vue-router": "^4.2.5"
+    "vue": "^3.3.7"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.5.1",
     "gsap": "^3.12.5",
+    "html2pdf.js": "^0.10.3",
     "pinia": "^2.1.7",
-    "posthog-js": "^1.111.2"
+    "posthog-js": "^1.111.2",
+    "vue-router": "^4.2.5"
   }
 }

@@ -1,378 +1,926 @@
 <template>
-    <main class="main">
-        <!--==================== HOME ====================-->
+  <main class="main">
+    <!--==================== HOME ====================-->
+    <!-- 
+    <section class="home section" id="home">
+      <div class="container">
+        <div class="home__container grid">
+          <div class="home__info">
+            <div class="home__info-content">
+              <p class="home__title-1">Webflow Professional</p>
+              <h1 data-text="Oscar" class="home__title home__title-1">Oscar</h1>
+              <h1 data-text="McIntosh" class="home__title home__title-1">
+                McIntosh
+              </h1>
+              <p class="home__title-1">Freelancer and subcontractor</p>
+            </div>
+          </div>
 
-        <section class="home section" id="home">
-            <div class="container">
-                <div class="home__container grid">
-                    <div class="home__info">
-                        <div class="home__info-content">
-                            <p class="home__title-1">Webflow Professional</p>
-                            <h1 data-text="Oscar" class="home__title home__title-1">Oscar</h1>
-                            <h1 data-text="McIntosh" class="home__title home__title-1">McIntosh</h1>
-                            <p class="home__title-1">Freelancer and subcontractor</p>
-                        </div>
-                    </div>
+          <div class="home__data grid">
+            <div class="home__blob">
+              <div class="home__perfil">
+                <img
+                  fetchpriority="high"
+                  src="~/assets/images/portfolio_pic.webp"
+                  alt="picture of man staring"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home__social-wrap">
+          <div class="image-half-round-shape"></div>
+          <ul class="home__social">
+            <li class="home__social-link">
+              <a
+                href="www.linkedin.com/in/oscar-mcintosh"
+                aria-label="Visit my linkedin page"
+                target="_blank"
+              >
+                <i class="ri-linkedin-box-line"></i>
+              </a>
+            </li>
 
-                    <div class="home__data grid">
+            <li class="wave-btn">
+              <div class="ripple"><i class="ri-arrow-down-s-line"></i></div>
+            </li>
+            <li class="home__social-link">
+              <a
+                href="https://github.com/oscar-mcintosh"
+                aria-label="Visit my Github page"
+                target="_blank"
+              >
+                <i class="ri-github-line"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="home__container grid">
+            <div class="home__info">
+              <div class="home__info-content">
+                <p class="home__title-1">Oscar McIntosh</p>
+                <h1 data-text="FrontEnd" class="home__title home__title-1">
+                  FrontEnd
+                </h1>
+                <h1 data-text="Developer" class="home__title home__title-1">
+                  Developer
+                </h1>
+                <p class="home__title-1">Webflow Professional</p>
+                <NuxtLink to="/about" class="button">LEARN MORE</NuxtLink>
+              </div>
+            </div>
+
+            <!-- <div class="home__data grid">
                         <div class="home__blob">
                             <div class="home__perfil">
                                 <img fetchpriority="high" src="~/assets/images/portfolio_pic.webp" alt="picture of man staring" />
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="home__social-wrap">
-                    <div class="image-half-round-shape"></div>
-                    <ul class="home__social">
-                        <li class="home__social-link">
-                            <a href="www.linkedin.com/in/oscar-mcintosh" aria-label="Visit my linkedin page" target="_blank">
-                                <i class="ri-linkedin-box-line"></i>
-                            </a>
-                        </li>
-                        
-                        <li class="wave-btn">
-                            <div class="ripple"><i class="ri-arrow-down-s-line"></i></div>
+                    </div> -->
+          </div>
 
-                        </li>
-                        <li class="home__social-link">
-                            <a href="https://github.com/oscar-mcintosh" aria-label="Visit my Github page" target="_blank">
-                                <i class="ri-github-line"></i>
-                            </a>
-                        </li>
+          <!-- <h1>
+          <span class="subtitle">Full-Stack</span>
+          <span class="title">Development Agency</span>
+        </h1>
+        <div class="hero-text">
+          <p class="small-text">
+            Мы не предлагаем маркетинг. Мы не даем копирайтинг.
+          </p>
+          <p class="main-text">
+            Мы создаем визуальные и текстовые смыслы любой задаче, встроенной в
+            жесткие рамки делового мира.
+          </p>
+        </div>
+        <a href="#order" class="cta-button">ЗАКАЗАТЬ УСЛУГУ</a> -->
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="ri-facebook-fill"></i></a>
+            <a href="#" class="social-link"
+              ><i class="ri-instagram-line"></i
+            ></a>
+            <a href="#" class="social-link"><i class="ri-telegram-fill"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!--==================== ABOUT ====================-->
+    <section class="intro">
+      <div class="pattern-bg"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 wow fadeIn">
+            <h6>The Two Forty Two Dev</h6>
+            <h2>Custom Web Technology to Meet Your Digital Needs</h2>
+          </div>
+          <!-- end col-12 -->
+          <!-- <div class="col-lg-5 wow fadeIn">
+          <h4>Two Forty Two Dev's.</h4>
+        </div> -->
+          <!-- end col-5 -->
+          <div class="col-lg-7 wow fadeIn" data-wow-delay="0.10s">
+            <p>
+              Hello! My name is Oscar McIntosh. I'm a Freelance and Contract
+              Frontend, Webflow, Web Developer based in the heart of Lincoln,
+              Nebraska, and passion for crafting beautiful and functional
+              websites. With six years of hands-on experience under my belt,
+              I've honed my skills in HTML, CSS, JavaScript, and Vue.js.
+            </p>
+            <p>
+              My specialization lies in Webflow, where I bring creativity and
+              precision together to bring concepts to life. From sleek designs
+              to seamless user experiences, I thrive on turning visions into
+              reality, pixel by pixel.
+            </p>
+            <p>
+              Let's collaborate and transform your digital presence into
+              something truly extraordinary.
+            </p>
 
-                    </ul>
-                </div>
+            <div class="custom-link wow">
+              <NuxtLink to="/resume" class="button">
+                <!-- <div class="lines"><span></span> <span></span></div> -->
+                <b>VIEW RESUME</b>
+              </NuxtLink>
+              <!-- <NuxtLink to="/sndbx" class="button">
+                <b>sndbxE</b>
+              </NuxtLink> -->
+              <button @click="downloadResume" class="button download-button">
+                <!-- <div class="lines"><span></span> <span></span></div> -->
+                <b>DOWNLOAD RESUME</b>
+              </button>
             </div>
+            <!-- end custom-link -->
+          </div>
+          <!-- end col-7 -->
+          <!-- <div class="col-12 wow fadeIn"> -->
+          <!-- </div> -->
+          <!-- end col-12 -->
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container -->
+    </section>
+    <!-- end intro -->
 
-        </section>
-
-
-         <!--==================== ABOUT ====================-->
-         <section class="about section" id="about">
-            <div class="about__container container grid section__border">
-                <div class="about__data">
-                    <h2 class="section__title">
-                        About <span>Me</span>
-                        <span class="section__subtitle"></span>
-                    </h2>
-                    <p class="about__description">
-                        Hello! My name is Oscar McIntosh. I'm a Freelance and Contract Frontend, Webflow, Web Developer based in the heart of Lincoln, Nebraska, and passion for crafting beautiful and functional websites. With six years of hands-on experience under my belt, I've honed my skills in HTML, CSS, JavaScript, and Vue.js.
-                    </p>
-                    <p class="about__description">
-                        My specialization lies in Webflow, where I bring creativity and precision together to bring concepts to life. From sleek designs to seamless user experiences, I thrive on turning visions into reality, pixel by pixel.
-                    </p>
-                    <p class="about__description">
-                        Beyond coding, I'm well-versed in the intricacies of SEO, leveraging tools like Google Analytics and Tag Manager to optimize website performance and drive organic traffic. I believe in the power of data-driven decisions, ensuring that every aspect of a project is strategically crafted for success.
-                    </p>
-                    <p class="about__description">
-                        In every project I undertake, my goal is simple: to create web experiences that not only meet but exceed expectations. Whether it's a personal blog or a corporate website, I approach each task with enthusiasm, attention to detail, and a commitment to excellence.
-                    </p>
-                    <p class="about__description">
-                        Let's collaborate and transform your digital presence into something truly extraordinary.
-                    </p>
-                    <a href="#contact" class="button">Contact Me</a>
-                </div>
-            </div>
-         </section>
-
-        <!--==================== PORTFOLIO ====================-->
-
-        <section class="projects section" id="portfolio">
-            <h2 class="section__title">Portfolio</h2>
+    <!-- <section class="about section" id="about">
+      <div class="about__container container grid section__border">
+        <div class="about__data">
+          <h2 class="section__title">
+            About <span>Me</span>
             <span class="section__subtitle"></span>
+          </h2>
+          <p class="about__description">
+            Hello! My name is Oscar McIntosh. I'm a Freelance and Contract
+            Frontend, Webflow, Web Developer based in the heart of Lincoln,
+            Nebraska, and passion for crafting beautiful and functional
+            websites. With six years of hands-on experience under my belt, I've
+            honed my skills in HTML, CSS, JavaScript, and Vue.js.
+          </p>
+          <p class="about__description">
+            My specialization lies in Webflow, where I bring creativity and
+            precision together to bring concepts to life. From sleek designs to
+            seamless user experiences, I thrive on turning visions into reality,
+            pixel by pixel.
+          </p>
+          <p class="about__description">
+            Beyond coding, I'm well-versed in the intricacies of SEO, leveraging
+            tools like Google Analytics and Tag Manager to optimize website
+            performance and drive organic traffic. I believe in the power of
+            data-driven decisions, ensuring that every aspect of a project is
+            strategically crafted for success.
+          </p>
+          <p class="about__description">
+            In every project I undertake, my goal is simple: to create web
+            experiences that not only meet but exceed expectations. Whether it's
+            a personal blog or a corporate website, I approach each task with
+            enthusiasm, attention to detail, and a commitment to excellence.
+          </p>
+          <p class="about__description">
+            Let's collaborate and transform your digital presence into something
+            truly extraordinary.
+          </p>
+          <a href="#contact" class="button">Contact Me</a>
+        </div>
+      </div>
+    </section> -->
+
+    <!--==================== SERVICES ====================-->
+    <section class="services-content-block">
+      <div class="video-bg"></div>
+      <!-- end video-bg -->
+      <div class="container">
+        <div class="row">
+          <div class="col-12 wow fadeIn">
+            <!-- <h6>SMOOTH INTERFACE INTERACTION</h6> -->
+            <h2>Services to Get Real Results</h2>
+          </div>
+          <!-- end col-12 -->
+          <div class="col-md-4 wow fadeIn" data-wow-delay="0s">
+            <div class="flex column">
+              <div class="skills__blob2">
+                <img src="~/assets/images/vue-9.svg" alt="skills image" />
+              </div>
+
+              <div class="content-box flex column">
+                <div class="flex ai-center">
+                  <small>01</small><span></span>
+                  <h4>WEB APP DEVELOPMENT</h4>
+                </div>
+                <!-- end left -->
+                <div class="content-box flex column jc-center">
+                  <!-- <h4>WEB APP DEVELOPMENT</h4> -->
+                  <p>Building modern, responsive web applications.</p>
+                  <ul>
+                    <li>
+                      <i class="ri-settings-2-line"></i>Vue.js & Nuxt.js
+                      Development
+                    </li>
+                    <li>
+                      <i class="ri-settings-2-line"></i>Responsive Web Design
+                    </li>
+                    <li><i class="ri-settings-2-line"></i>API Integration</li>
+                    <li>
+                      <i class="ri-settings-2-line"></i>Performance Optimization
+                    </li>
+                    <li>
+                      <i class="ri-settings-2-line"></i>Cross-browser
+                      Compatibility
+                    </li>
+                  </ul>
+                </div>
+                <!-- end right -->
+              </div>
+              <!-- end content-box -->
+            </div>
+          </div>
+          <!-- end col-4 -->
+          <div class="col-md-4 wow fadeIn" data-wow-delay="0.05s">
+            <div class="flex column">
+              <div class="skills__blob2">
+                <img
+                  src="~/assets/images/webflow-icon.svg"
+                  alt="skills image"
+                />
+              </div>
+            </div>
+
+            <div class="content-box flex column jc-center">
+              <div class="flex ai-center">
+                <small>02</small><span></span>
+                <h4>WEBFLOW EXPERTISE</h4>
+              </div>
+              <!-- end left -->
+              <div class="content-box flex column jc-center">
+                <p>Creating stunning websites with Webflow.</p>
+                <ul>
+                  <li>
+                    <i class="ri-settings-2-line"></i>Custom Webflow Development
+                  </li>
+                  <li>
+                    <i class="ri-settings-2-line"></i>CMS Setup & Integration
+                  </li>
+                  <li><i class="ri-settings-2-line"></i>Custom Interactions</li>
+                  <li>
+                    <i class="ri-settings-2-line"></i>E-commerce Solutions
+                  </li>
+                  <li>
+                    <i class="ri-settings-2-line"></i>Client Training & Support
+                  </li>
+                </ul>
+              </div>
+              <!-- end right -->
+            </div>
+            <!-- end content-box -->
+          </div>
+          <!-- end col-4 -->
+          <div class="col-md-4 wow fadeIn" data-wow-delay="0.10s">
+            <div class="flex column">
+              <div class="skills__blob2">
+                <img
+                  src="~/assets/images/google-search-ads.svg"
+                  alt="skills image"
+                />
+              </div>
+
+              <div class="content-box flex column jc-center">
+                <div class="flex ai-center">
+                  <small>03</small><span></span>
+                  <h4>SEO & ANALYTICS</h4>
+                </div>
+                <div class="content-box flex column">
+                  <p>Optimizing websites for maximum visibility.</p>
+                  <ul>
+                    <li>
+                      <i class="ri-settings-2-line"></i>Technical SEO
+                      Implementation
+                    </li>
+                    <li>
+                      <i class="ri-settings-2-line"></i>Google Analytics Setup
+                    </li>
+                    <li>
+                      <i class="ri-settings-2-line"></i>Keyword Research &
+                      Strategy
+                    </li>
+                    <li>
+                      <i class="ri-settings-2-line"></i>Performance Monitoring
+                    </li>
+                    <li>
+                      <i class="ri-settings-2-line"></i>Conversion Rate
+                      Optimization
+                    </li>
+                  </ul>
+                </div>
+                <!-- end right -->
+              </div>
+              <!-- end content-box -->
+            </div>
+          </div>
+          <!-- end col-4 -->
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container -->
+    </section>
+
+    <!--==================== PORTFOLIO ====================-->
+
+    <section class="works" id="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 wow fadeIn">
+            <h6>SMOOTH INTERFACE INTERACTION</h6>
+            <h2>My selected works and portfolio</h2>
+          </div>
+          <!-- end col-12 -->
+          <div class="col-12">
             <div>
-                    <ProjectFilter />
+              <ProjectFilter />
+            </div>
+          </div>
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container -->
+    </section>
+
+    <!-- <section class="projects section" id="portfolio">
+      <h2 class="section__title">Portfolio</h2>
+      <span class="section__subtitle"></span>
+      <div>
+        <ProjectFilter />
+      </div>
+    </section> -->
+
+    <!--==================== SKILLS ====================-->
+    <!-- <section class="skills section" id="experience">
+      <h2 class="section__title">Experience</h2>
+      <span class="section__subtitle"></span>
+
+      <div class="skills__container container grid section__border">
+        <div class="skills__content" data-animate="fadeup">
+          <h3 class="skills__title">
+            <i class="ri-braces-line"></i>Frontend Developer
+          </h3>
+          <div class="skills__info">
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="~/assets/images/html-1.svg" alt="skills image" />
+              </div>
+              <h3 class="skills__name">HTML</h3>
+              <span class="projects__subtitle">Five years</span>
+            </div>
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="~/assets/images/css-3.svg" alt="skills image" />
+              </div>
+              <h3 class="skills__name">CSS</h3>
+              <span class="projects__subtitle">Five years</span>
+            </div>
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img
+                  src="~/assets/images/logo-javascript.svg"
+                  alt="skills image"
+                />
+              </div>
+              <h3 class="skills__name">Javascript</h3>
+              <span class="projects__subtitle">Five years</span>
+            </div>
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="~/assets/images/vue-9.svg" alt="skills image" />
+              </div>
+              <h3 class="skills__name">Vue JS</h3>
+              <span class="projects__subtitle">Five years</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills__content" data-animate="fadeup">
+          <h3 class="skills__title">
+            <i class="ri-database-2-line"></i>CMS' and other tools
+          </h3>
+          <div class="skills__info">
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="~/assets/images/git-icon.svg" alt="skills image" />
+              </div>
+              <h3 class="skills__name">GIT</h3>
+              <span class="projects__subtitle">Three years</span>
+            </div>
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img
+                  src="~/assets/images/wordpress-icon-1.svg"
+                  alt="skills image"
+                />
+              </div>
+              <h3 class="skills__name">Wordpress</h3>
+              <span class="projects__subtitle">Four years</span>
+            </div>
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img
+                  src="~/assets/images/webflow-icon.svg"
+                  alt="skills image"
+                />
+              </div>
+              <h3 class="skills__name">Webflow</h3>
+              <span class="projects__subtitle">Five years</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!--==================== SKILLS2 UI FOR LARGER SCREENS ====================-->
+    <!-- <section class="skills2 section" id="experience2">
+      <h2 class="section__title">Experience</h2>
+      <span class="section__subtitle"></span>
+
+      <div class="container flex section__border">
+        <div class="skills__content" data-animate="fadeup">
+          <h3 class="skills__title">
+            <i class="ri-braces-line"></i>Frontend Developer
+          </h3>
+          <div class="skills__info2 p-t">
+            <div class="skills__data2">
+              <div class="skills__data p-l">
+                <h3 class="skills__name">HTML</h3>
+                <span class="projects__subtitle">Five years</span>
+              </div>
+              <div class="skills__blob2 s1">
+                <img src="~/assets/images/html-1.svg" alt="skills image" />
+              </div>
+            </div>
+            <div class="skills__data2">
+              <div class="skills__data">
+                <h3 class="skills__name">CSS</h3>
+                <span class="projects__subtitle">Five years</span>
+              </div>
+              <div class="skills__blob2 s2">
+                <img
+                  src="~/assets/images/interface-icon.svg"
+                  alt="skills image"
+                />
+              </div>
+            </div>
+            <div class="skills__data2">
+              <div class="skills__data">
+                <h3 class="skills__name">Javascript</h3>
+                <span class="projects__subtitle">Five years</span>
+              </div>
+              <div class="skills__blob2 s3">
+                <img
+                  src="~/assets/images/logo-javascript.svg"
+                  alt="skills image"
+                />
+              </div>
+            </div>
+            <div class="skills__data2">
+              <div class="skills__data p-l">
+                <h3 class="skills__name">Vue JS</h3>
+                <span class="projects__subtitle">Five years</span>
+              </div>
+              <div class="skills__blob2 s4">
+                <img src="~/assets/images/vue-9.svg" alt="skills image" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skills__blob-large">
+          <div class="skills__blob-inset">
+            <div class="skills__blob-inset-img">
+              <img src="~/assets/images/logo2.svg" alt="242 logo" />
+            </div>
+          </div>
+        </div>
+
+        <div class="skills__content" data-animate="fadeup">
+          <h3 class="skills__title">
+            <i class="ri-database-2-line"></i>CMS' and other tools
+          </h3>
+          <div class="skills__info2 p-t">
+            <div class="skills__data2">
+              <div class="skills__blob2 s5">
+                <img src="~/assets/images/git-icon.svg" alt="skills image" />
+              </div>
+              <div class="skills__data p-r">
+                <h3 class="skills__name">GIT</h3>
+                <span class="projects__subtitle">Three years</span>
+              </div>
+            </div>
+            <div class="skills__data2">
+              <div class="skills__blob2 s6">
+                <img
+                  src="~/assets/images/wordpress-icon-1.svg"
+                  alt="skills image"
+                />
+              </div>
+              <div class="skills__data p-l">
+                <h3 class="skills__name">Wordpress</h3>
+                <span class="projects__subtitle">Four years</span>
+              </div>
+            </div>
+            <div class="skills__data2">
+              <div class="skills__blob2 s7">
+                <img
+                  src="~/assets/images/webflow-icon.svg"
+                  alt="skills image"
+                />
+              </div>
+              <div class="skills__data p-r p-l">
+                <h3 class="skills__name">Webflow</h3>
+                <span class="projects__subtitle">Five years</span>
+              </div>
             </div>
 
-        </section>
-
-
-        <!--==================== SKILLS ====================-->
-        <section class="skills section" id="experience">
-            <h2 class="section__title">Experience</h2>
-            <span class="section__subtitle"></span>
-
-            <div class="skills__container container grid section__border">
-
-                <div class="skills__content" data-animate="fadeup">
-                    <h3 class="skills__title">
-                        <i class="ri-braces-line"></i>Frontend Developer
-                    </h3>
-                    <div class="skills__info">
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="~/assets/images/html-1.svg" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">HTML</h3>
-                            <span class="projects__subtitle">Five years</span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="~/assets/images/css-3.svg" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">CSS</h3>
-                            <span class="projects__subtitle">Five years</span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="~/assets/images/logo-javascript.svg" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">Javascript</h3>
-                            <span class="projects__subtitle">Five years</span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="~/assets/images/vue-9.svg" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">Vue JS</h3>
-                            <span class="projects__subtitle">Five years</span>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="skills__content" data-animate="fadeup">
-                    <h3 class="skills__title">
-                        <i class="ri-database-2-line"></i>CMS' and other tools
-                    </h3>
-                    <div class="skills__info">
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="~/assets/images/git-icon.svg" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">GIT</h3>
-                            <span class="projects__subtitle">Three years</span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="~/assets/images/wordpress-icon-1.svg" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">Wordpress</h3>
-                            <span class="projects__subtitle">Four years</span>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__blob">
-                                <img src="~/assets/images/webflow-icon.svg" alt="skills image">
-                            </div>
-                            <h3 class="skills__name">Webflow</h3>
-                            <span class="projects__subtitle">Five years</span>
-                        </div>
-
-                    </div>
-                </div>
-
+            <div class="skills__data2 p-r">
+              <div class="skills__blob2 s8">
+                <img
+                  src="~/assets/images/google-search-ads.svg"
+                  alt="skills image"
+                />
+              </div>
+              <div class="skills__data">
+                <h3 class="skills__name">SEO</h3>
+                <span class="projects__subtitle">Five years</span>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section> -->
 
-        <!--==================== SKILLS2 UI FOR LARGER SCREENS ====================-->
-        <section class="skills2 section" id="experience2">
-            <h2 class="section__title">Experience</h2>
-            <span class="section__subtitle"></span>
+    <!--==================== CONTACT ====================-->
+    <section class="contact section" id="contact">
+      <h2 class="section__title">Contact Me</h2>
+      <ContactForm />
+    </section>
 
-            <div class=" container flex section__border">
-                <div class="skills__content" data-animate="fadeup">
-                    <h3 class="skills__title">
-                        <i class="ri-braces-line"></i>Frontend Developer
-                    </h3>
-                    <div class="skills__info2 p-t">
-                        <div class="skills__data2">
-                            <div class="skills__data p-l">
-                                <h3 class="skills__name">HTML</h3>
-                                <span class="projects__subtitle">Five years</span>
-                            </div>
-                            <div class="skills__blob2 s1">
-                                <img src="~/assets/images/html-1.svg" alt="skills image">
-                            </div>
-                        </div>
-                        <div class="skills__data2">
-                            <div class="skills__data">
-                                <h3 class="skills__name">CSS</h3>
-                                <span class="projects__subtitle">Five years</span>
-                            </div>
-                            <div class="skills__blob2 s2">
-                                <img src="~/assets/images/css-3.svg" alt="skills image">
-                            </div>
-                        </div>
-                        <div class="skills__data2">
-                            <div class="skills__data">
-                                <h3 class="skills__name">Javascript</h3>
-                                <span class="projects__subtitle">Five years</span>
-                            </div>
-                            <div class="skills__blob2 s3">
-                                <img src="~/assets/images/logo-javascript.svg" alt="skills image">
-                            </div>
-                        </div>
-                        <div class="skills__data2">
-                            <div class="skills__data p-l">
-                                <h3 class="skills__name">Vue JS</h3>
-                                <span class="projects__subtitle">Five years</span>
-                            </div>
-                            <div class="skills__blob2 s4">
-                                <img src="~/assets/images/vue-9.svg" alt="skills image">
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                    <div class="skills__blob-large">
-                        <div class="skills__blob-inset">
-                            <div class="skills__blob-inset-img">
-                                <img src="~/assets/images/logo2.svg" alt="242 logo">
-                            </div>
-                        </div>
-                    </div>
-
-                <div class="skills__content" data-animate="fadeup">
-                    <h3 class="skills__title">
-                        <i class="ri-database-2-line"></i>CMS' and other tools
-                    </h3>
-                    <div class="skills__info2 p-t">
-                        <div class="skills__data2">
-                            <div class="skills__blob2 s5">
-                                <img src="~/assets/images/git-icon.svg" alt="skills image">
-                            </div>
-                            <div class="skills__data p-r">
-                                <h3 class="skills__name">GIT</h3>
-                                <span class="projects__subtitle">Three years</span>
-                            </div>
-
-                        </div>
-                        <div class="skills__data2">
-                            <div class="skills__blob2 s6">
-                                <img src="~/assets/images/wordpress-icon-1.svg" alt="skills image">
-                            </div>
-                            <div class="skills__data p-l">
-                                <h3 class="skills__name">Wordpress</h3>
-                                <span class="projects__subtitle">Four years</span>
-                            </div>
-                        </div>
-                        <div class="skills__data2">
-                            <div class="skills__blob2 s7">
-                                <img src="~/assets/images/webflow-icon.svg" alt="skills image">
-                            </div>
-                            <div class="skills__data p-r p-l">
-                                <h3 class="skills__name">Webflow</h3>
-                                <span class="projects__subtitle">Five years</span>
-                            </div>
-                        </div>
-
-                         <div class="skills__data2 p-r">
-                            <div class="skills__blob2 s8">
-                                <img src="~/assets/images/google-search-ads.svg" alt="skills image">
-                            </div>
-                            <div class="skills__data">
-                                <h3 class="skills__name">SEO</h3>
-                                <span class="projects__subtitle">Five years</span>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-
-
-        <!--==================== CONTACT ====================-->
-         <section class="contact section" id="contact">
-            <h2 class="section__title">Contact Me</h2>
-            <ContactForm/>
-         </section>
-
-
-        <ScrollToTop/>
-    </main>
+    <ScrollToTop />
+  </main>
 </template>
 
 <script setup>
-    import { useProjectStore } from '/stores/projectStore';
-    import gsap from 'gsap'; 
-    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useProjectStore } from "/stores/projectStore";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-    gsap.registerPlugin(ScrollTrigger);
-    const { $posthog } = useNuxtApp()
-    if ($posthog) {
-        const posthog = $posthog()
-        posthog.capture('<event_name>')
-    }
-    const projectStore = useProjectStore();
+gsap.registerPlugin(ScrollTrigger);
+const { $posthog } = useNuxtApp();
+if ($posthog) {
+  const posthog = $posthog();
+  posthog.capture("<event_name>");
+}
+const projectStore = useProjectStore();
 
-    const getProject =  projectStore.getProject();
+// Initialize projects on mount
+onMounted(async () => {
+  if (!projectStore.isInitialized) {
+    await projectStore.fetchAllProjects();
+  }
 
-    useHead({
-        title: 'Web Developer & Webflow Developer in Lincoln, NE',
-        meta: [
-            { name: 'description', 
-            content: 'Professional frontend web developer and Webflow expert based in Lincoln, NE. Specializing in responsive web design and custom development.'
-            }
-        ],
-        meta: [
-            { name: 'keywords', 
-            content: 'Frontend Web Developer Lincoln NE, Webflow Developer Lincoln NE, Custom Web Development Lincoln, Responsive Web Design Lincoln NE, SEO strategist Lincoln NE'
-            }
-        ]
+  // Create a master timeline for all animations
+  const masterTl = gsap.timeline({
+    defaults: { ease: "power2.out" },
+  });
 
+  // Initial states
+  gsap.set(".hero-bg", { scale: 1.1, opacity: 1 });
+  gsap.set(".home__info-content p", { opacity: 0, y: 20 });
+  gsap.set(".home__info-content h1", { opacity: 0, y: 20 });
+  gsap.set(".home__info-content .button", { opacity: 0, y: 20 });
+  gsap.set(".social-link", { opacity: 0, y: -10 });
+
+  // Hero section animations
+  masterTl
+    .to(".hero-bg", {
+      scale: 1,
+      duration: 1.2,
     })
-const main = ref();
-let ctx;
+    .to(
+      ".home__info-content p",
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.2,
+      },
+      "-=0.8"
+    )
+    .to(
+      ".home__info-content h1",
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.2,
+      },
+      "-=0.4"
+    )
+    .to(
+      ".home__info-content .button",
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+      },
+      "-=0.4"
+    )
+    .to(
+      ".social-link",
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.2,
+      },
+      "-=0.4"
+    );
 
-onMounted(() => {
-  const fadeInElements = () => {
-    // const image = document.querySelector('.home__perfil'); 
-    const text = document.querySelectorAll('.home__title-1'); // Select the text element
-    
+  // Scroll animations for content boxes
+  const contentBoxes = document.querySelectorAll(".content-box");
+  contentBoxes.forEach((box) => {
+    gsap.fromTo(
+      box,
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        scrollTrigger: {
+          trigger: box,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+          markers: false,
+        },
+      }
+    );
+  });
 
-    gsap.from(text, {
-      duration: 2,
-      ease: "power4.out",
-      y: 65,
-      stagger: 0.2,
-      delay: 0.3 // Adding a slight delay for a staggered effect
-    });
-  };
+  // Scroll animations for fadeIn elements
+  const fadeInElements = document.querySelectorAll(".fadeIn");
+  fadeInElements.forEach((element) => {
+    const delay = element.getAttribute("data-wow-delay")
+      ? parseFloat(element.getAttribute("data-wow-delay")) * 0.1
+      : 0;
 
+    gsap.fromTo(
+      element,
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        delay,
+        scrollTrigger: {
+          trigger: element,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+          markers: false,
+        },
+      }
+    );
+  });
 
-  fadeInElements(); // Trigger the fading in of elements
-
+  // Cleanup function
+  onBeforeUnmount(() => {
+    ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    masterTl.kill();
+  });
 });
 
+useHead({
+  title: "Web Developer & Webflow Developer in Lincoln, NE",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Professional frontend web developer and Webflow expert based in Lincoln, NE. Specializing in responsive web design and custom development.",
+    },
+    {
+      name: "keywords",
+      content:
+        "Frontend Web Developer Lincoln NE, Webflow Developer Lincoln NE, Custom Web Development Lincoln, Responsive Web Design Lincoln NE, SEO strategist Lincoln NE",
+    },
+  ],
+});
 </script>
 
 <style scoped>
-article{
-    margin-bottom: 30px;
+article {
+  margin-bottom: 30px;
 }
 /* .home__perfil{
     animation: fadeIn 1s ease-in-out
 } */
 
-.home__title-1{
-    animation: fade 1s ease-in-out
+.home__title-1 {
+  animation: fade 1s ease-in-out;
 }
 
-@keyframes fadeIn{
-    0%{
-        opacity: 0;
-    }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
 }
 
-@keyframes fade{
-    0%{
-        opacity: 0;
-    }
-    50%{
-        opacity: 0;
-    }
-    /* 75%{
-        opacity: 0;
-    } */
-    100%{
-        opacity: 1;
-    }
+.content-box,
+.fadeIn {
+  will-change: transform, opacity;
 }
 
+.custom-link {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent-color);
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+.download-button {
+  background: #333;
+}
+
+.download-button:hover {
+  background: var(--accent-color);
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+    url("~/assets/images/twofourtwo_hero.webp") center center no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  margin-top: 0;
+  max-width: 800px;
+  margin-left: 0;
+  margin-right: auto;
+  text-align: left;
+}
+
+.hero-content h1 {
+  margin-bottom: 2rem;
+}
+
+.hero-content .subtitle {
+  display: block;
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content .title {
+  display: block;
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.hero-text {
+  margin-bottom: 3rem;
+}
+
+.hero-text .small-text {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+.hero-text .main-text {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+.social-links {
+  position: fixed;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 3;
+}
+
+.social-link {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #00e1d0;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    margin-top: 0;
+    text-align: left;
+  }
+
+  .hero-content .title {
+    font-size: 3rem;
+  }
+
+  .hero-text {
+    text-align: left;
+  }
+
+  .social-links {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+}
+
+.content-box ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.content-box ul li i {
+  color: var(--accent-color);
+  font-size: 1.1rem;
+}
 </style>

@@ -110,23 +110,25 @@
 </script>
 
 <style scoped>
+    .nav {
+        transition: transform 0.4s ease-in-out;
+    }
+
     .hidden {
-    transform: translateY(-100%);
-    display: none;
+        transform: translateY(-100%);
+        display: none;
     }
 
-.animate{
-    animation: fade 2s ease-in-out
-
-}
-
-@keyframes fade{
-    0%{
-        opacity: 0;
+    .animate{
+        animation: fade 2s ease-in-out
     }
-    100%{
-        opacity: 1;
-    }
-}
 
+    @keyframes fade{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
 </style>

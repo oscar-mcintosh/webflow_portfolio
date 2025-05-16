@@ -48,22 +48,19 @@ export default defineNuxtConfig({
 
     }
   },
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/main.css', '~/assets/css/style.css'],
+  
 
   runtimeConfig: {
-
     public: {
-      // API_BEARER_TOKEN: process.env.VUE_APP_API_BEARER_TOKEN,
-      // API: process.env.VUE_APP_API,
-
       apiKey: process.env.API_KEY,
       apiUrl: process.env.API_URL,
       
-      posthogPublicKey: 'phc_wq7R6qivBGL3eIK1Wh7ixkTvTuCTjOV9GjVMMyKQFp1',
-      posthogHost: "https://us.i.posthog.com"
-      // posthogPublicKey: process.env.POST_KEY,
-      // posthogHost: process.env.POST_URL,
-
+      // Only include PostHog in production
+      ...(process.env.NODE_ENV === 'production' ? {
+        posthogPublicKey: 'phc_wq7R6qivBGL3eIK1Wh7ixkTvTuCTjOV9GjVMMyKQFp1',
+        posthogHost: "https://us.i.posthog.com"
+      } : {})
     }
   },
   build: {

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Three lines on the left -->
+  <line x1="20" y1="30" x2="50" y2="30" stroke="#000" stroke-width="8" stroke-linecap="round"/>
+  <line x1="20" y1="50" x2="50" y2="50" stroke="#000" stroke-width="8" stroke-linecap="round"/>
+  <line x1="20" y1="70" x2="50" y2="70" stroke="#000" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Rectangle on the right -->
+  <rect x="60" y="30" width="20" height="40" stroke="#000" stroke-width="8" fill="none" rx="2"/>
+</svg> 
