@@ -359,7 +359,7 @@ body.dark-theme {
     align-items: center;
     row-gap: .25rem;
     font-size: var(--small-font-size);
-    color: var(--title-color);
+    /* color: var(--title-color); */
     transition: color .3s;
 }
 

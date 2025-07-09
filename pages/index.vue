@@ -66,40 +66,13 @@
             <div class="home__info">
               <div class="home__info-content">
                 <p class="home__title-1">Oscar McIntosh</p>
-                <h1 data-text="FrontEnd" class="home__title home__title-1">
-                  FrontEnd
-                </h1>
-                <h1 data-text="Developer" class="home__title home__title-1">
-                  Developer
-                </h1>
+                <h1 class="home__title home__title-1">FrontEnd</h1>
+                <h1 class="home__title home__title-1">Web Developer</h1>
                 <p class="home__title-1">Webflow Professional</p>
-                <NuxtLink to="/about" class="button">LEARN MORE</NuxtLink>
+                <NuxtLink to="#about" class="button">LEARN MORE</NuxtLink>
               </div>
             </div>
-
-            <!-- <div class="home__data grid">
-                        <div class="home__blob">
-                            <div class="home__perfil">
-                                <img fetchpriority="high" src="~/assets/images/portfolio_pic.webp" alt="picture of man staring" />
-                            </div>
-                        </div>
-                    </div> -->
           </div>
-
-          <!-- <h1>
-          <span class="subtitle">Full-Stack</span>
-          <span class="title">Development Agency</span>
-        </h1>
-        <div class="hero-text">
-          <p class="small-text">
-            Мы не предлагаем маркетинг. Мы не даем копирайтинг.
-          </p>
-          <p class="main-text">
-            Мы создаем визуальные и текстовые смыслы любой задаче, встроенной в
-            жесткие рамки делового мира.
-          </p>
-        </div>
-        <a href="#order" class="cta-button">ЗАКАЗАТЬ УСЛУГУ</a> -->
           <div class="social-links">
             <a href="#" class="social-link"><i class="ri-facebook-fill"></i></a>
             <a href="#" class="social-link"
@@ -112,20 +85,25 @@
     </section>
 
     <!--==================== ABOUT ====================-->
-    <section class="intro">
-      <div class="pattern-bg"></div>
+    <section class="intro" id="about">
+      <!-- <div class="pattern-bg"></div> -->
       <div class="container">
-        <div class="row">
-          <div class="col-12 wow fadeIn">
+        <div class="wow fadeIn wow fadeIn projects-intro">
+          <h6>The Two Forty Two Dev</h6>
+          <h2>Custom Web Technology to Meet Your Digital Needs</h2>
+        </div>
+
+        <div class="bd-grid">
+          <!-- <div class="wow fadeIn">
             <h6>The Two Forty Two Dev</h6>
             <h2>Custom Web Technology to Meet Your Digital Needs</h2>
-          </div>
+          </div> -->
           <!-- end col-12 -->
           <!-- <div class="col-lg-5 wow fadeIn">
           <h4>Two Forty Two Dev's.</h4>
         </div> -->
           <!-- end col-5 -->
-          <div class="col-lg-7 wow fadeIn" data-wow-delay="0.10s">
+          <div class="wow" data-wow-delay="0.10s">
             <p>
               Hello! My name is Oscar McIntosh. I'm a Freelance and Contract
               Frontend, Webflow, Web Developer based in the heart of Lincoln,
@@ -159,10 +137,16 @@
             </div>
             <!-- end custom-link -->
           </div>
-          <!-- end col-7 -->
-          <!-- <div class="col-12 wow fadeIn"> -->
-          <!-- </div> -->
-          <!-- end col-12 -->
+          <!-- end col-6 -->
+          <!-- <div class="col-lg-6 wow fadeIn" data-wow-delay="0.15s">
+            <div class="intro-image"> -->
+          <img
+            src="~/assets/images/computer-image.svg"
+            alt="Computer illustration"
+          />
+          <!-- </div>
+          </div> -->
+          <!-- end col-6 -->
         </div>
         <!-- end row -->
       </div>
@@ -213,15 +197,16 @@
     </section> -->
 
     <!--==================== SERVICES ====================-->
-    <section class="services-content-block">
+    <section class="services-content-block" id="experience2">
       <div class="video-bg"></div>
       <!-- end video-bg -->
       <div class="container">
-        <div class="row">
-          <div class="col-12 wow fadeIn">
-            <!-- <h6>SMOOTH INTERFACE INTERACTION</h6> -->
-            <h2>Services to Get Real Results</h2>
-          </div>
+        <div class="col-lg-6 wow fadeIn services-intro" data-wow-delay="0.2s">
+          <h6>How we can be helpful</h6>
+          <h2 class="services-title">UX/UI design & web development</h2>
+        </div>
+
+        <div class="services-row">
           <!-- end col-12 -->
           <div class="col-md-4 wow fadeIn" data-wow-delay="0s">
             <div class="flex column">
@@ -232,7 +217,7 @@
               <div class="content-box flex column">
                 <div class="flex ai-center">
                   <small>01</small><span></span>
-                  <h4>WEB APP DEVELOPMENT</h4>
+                  <h4>WEB DEVELOPMENT</h4>
                 </div>
                 <!-- end left -->
                 <div class="content-box flex column jc-center">
@@ -355,7 +340,7 @@
     <section class="works" id="portfolio">
       <div class="container">
         <div class="row">
-          <div class="col-12 wow fadeIn">
+          <div class="col-12 wow fadeIn projects-intro">
             <h6>SMOOTH INTERFACE INTERACTION</h6>
             <h2>My selected works and portfolio</h2>
           </div>
@@ -582,7 +567,6 @@
 
     <!--==================== CONTACT ====================-->
     <section class="contact section" id="contact">
-      <h2 class="section__title">Contact Me</h2>
       <ContactForm />
     </section>
 
@@ -667,57 +651,71 @@ onMounted(async () => {
       "-=0.4"
     );
 
-  // Scroll animations for content boxes
-  const contentBoxes = document.querySelectorAll(".content-box");
-  contentBoxes.forEach((box) => {
-    gsap.fromTo(
-      box,
-      {
-        opacity: 0,
-        y: 50,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        scrollTrigger: {
-          trigger: box,
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse",
-          markers: false,
-        },
-      }
-    );
-  });
-
   // Scroll animations for fadeIn elements
   const fadeInElements = document.querySelectorAll(".fadeIn");
   fadeInElements.forEach((element) => {
     const delay = element.getAttribute("data-wow-delay")
-      ? parseFloat(element.getAttribute("data-wow-delay")) * 0.1
+      ? parseFloat(element.getAttribute("data-wow-delay"))
       : 0;
 
-    gsap.fromTo(
-      element,
-      {
-        opacity: 0,
-        y: 50,
+    // Set initial state
+    gsap.set(element, { opacity: 0, y: 30 });
+
+    gsap.to(element, {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      delay: delay,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: element,
+        start: "top 85%",
+        end: "bottom 15%",
+        toggleActions: "play none none reverse",
+        markers: false,
       },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        delay,
-        scrollTrigger: {
-          trigger: element,
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse",
-          markers: false,
-        },
-      }
-    );
+    });
+  });
+
+  // Scroll animations for content boxes
+  const contentBoxes = document.querySelectorAll(".content-box");
+  contentBoxes.forEach((box) => {
+    gsap.set(box, { opacity: 0, y: 30 });
+
+    gsap.to(box, {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: box,
+        start: "top 85%",
+        end: "bottom 15%",
+        toggleActions: "play none none reverse",
+        markers: false,
+      },
+    });
+  });
+
+  // Special handling for intro section
+  const introElements = document.querySelectorAll(".intro .wow");
+  introElements.forEach((element, index) => {
+    gsap.set(element, { opacity: 0, y: 30 });
+
+    gsap.to(element, {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      delay: index * 0.2, // Stagger the animations
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: element,
+        start: "top 85%",
+        end: "bottom 15%",
+        toggleActions: "play none none reverse",
+        markers: false,
+      },
+    });
   });
 
   // Cleanup function
@@ -748,10 +746,6 @@ useHead({
 article {
   margin-bottom: 30px;
 }
-/* .home__perfil{
-    animation: fadeIn 1s ease-in-out
-} */
-
 .home__title-1 {
   animation: fade 1s ease-in-out;
 }
@@ -773,7 +767,7 @@ article {
   margin-top: 2rem;
 }
 
-.button {
+/* .button {
   display: inline-flex;
   align-items: center;
   padding: 0.75rem 1.5rem;
@@ -787,7 +781,7 @@ article {
   background: #333;
   transform: translateY(-2px);
 }
-
+ */
 .download-button {
   background: #333;
 }
@@ -798,7 +792,7 @@ article {
 
 .hero {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   background-color: #1a1a1a;
   color: #fff;
   overflow: hidden;
@@ -816,25 +810,16 @@ article {
   z-index: 1;
 }
 
-.hero .container {
-  position: relative;
-  z-index: 2;
-  padding: 2rem;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
-.hero-content {
+/* .hero-content {
   margin-top: 0;
   max-width: 800px;
   margin-left: 0;
   margin-right: auto;
   text-align: left;
-}
+} */
 
 .hero-content h1 {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .hero-content .subtitle {
@@ -912,7 +897,7 @@ article {
   }
 }
 
-.content-box ul li {
+/* .content-box ul li {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -922,5 +907,27 @@ article {
 .content-box ul li i {
   color: var(--accent-color);
   font-size: 1.1rem;
+} */
+
+/* Fix for nav height variable issue */
+.nav {
+  height: calc(var(--header-height) + 1.5rem) !important;
+}
+
+.hero-content h1 {
+  margin-bottom: 2rem;
+}
+
+.bd-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.about__img {
+  width: 280px;
+  border-radius: 0.5rem;
+  justify-self: center;
 }
 </style>
