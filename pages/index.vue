@@ -93,17 +93,8 @@
           <h2>Custom Web Technology to Meet Your Digital Needs</h2>
         </div>
 
-        <div class="bd-grid">
-          <!-- <div class="wow fadeIn">
-            <h6>The Two Forty Two Dev</h6>
-            <h2>Custom Web Technology to Meet Your Digital Needs</h2>
-          </div> -->
-          <!-- end col-12 -->
-          <!-- <div class="col-lg-5 wow fadeIn">
-          <h4>Two Forty Two Dev's.</h4>
-        </div> -->
-          <!-- end col-5 -->
-          <div class="wow" data-wow-delay="0.10s">
+        <div class="intro-content">
+          <div class="intro-text wow" data-wow-delay="0.10s">
             <p>
               Hello! My name is Oscar McIntosh. I'm a Freelance and Contract
               Frontend, Webflow, Web Developer based in the heart of Lincoln,
@@ -124,29 +115,20 @@
 
             <div class="custom-link wow">
               <NuxtLink to="/resume" class="button">
-                <!-- <div class="lines"><span></span> <span></span></div> -->
                 <b>VIEW RESUME</b>
               </NuxtLink>
-              <!-- <NuxtLink to="/sndbx" class="button">
-                <b>sndbxE</b>
-              </NuxtLink> -->
               <button @click="downloadResume" class="button download-button">
-                <!-- <div class="lines"><span></span> <span></span></div> -->
                 <b>DOWNLOAD RESUME</b>
               </button>
             </div>
-            <!-- end custom-link -->
           </div>
-          <!-- end col-6 -->
-          <!-- <div class="col-lg-6 wow fadeIn" data-wow-delay="0.15s">
-            <div class="intro-image"> -->
-          <img
-            src="~/assets/images/computer-image.svg"
-            alt="Computer illustration"
-          />
-          <!-- </div>
-          </div> -->
-          <!-- end col-6 -->
+          
+          <div class="intro-image wow" data-wow-delay="0.15s">
+            <img
+              src="~/assets/images/computer-image.svg"
+              alt="Computer illustration"
+            />
+          </div>
         </div>
         <!-- end row -->
       </div>
@@ -207,128 +189,105 @@
         </div>
 
         <div class="services-row">
-          <!-- end col-12 -->
-          <div class="col-md-4 wow fadeIn" data-wow-delay="0s">
-            <div class="flex column">
-              <div class="skills__blob2">
-                <img src="~/assets/images/vue-9.svg" alt="skills image" />
-              </div>
+          <div class="service-card wow fadeIn" data-wow-delay="0s">
+            <div class="skills__blob2">
+              <img src="~/assets/images/vue-9.svg" alt="skills image" />
+            </div>
 
-              <div class="content-box flex column">
-                <div class="flex ai-center">
-                  <small>01</small><span></span>
-                  <h4>WEB DEVELOPMENT</h4>
-                </div>
-                <!-- end left -->
-                <div class="content-box flex column jc-center">
-                  <!-- <h4>WEB APP DEVELOPMENT</h4> -->
-                  <p>Building modern, responsive web applications.</p>
-                  <ul>
-                    <li>
-                      <i class="ri-settings-2-line"></i>Vue.js & Nuxt.js
-                      Development
-                    </li>
-                    <li>
-                      <i class="ri-settings-2-line"></i>Responsive Web Design
-                    </li>
-                    <li><i class="ri-settings-2-line"></i>API Integration</li>
-                    <li>
-                      <i class="ri-settings-2-line"></i>Performance Optimization
-                    </li>
-                    <li>
-                      <i class="ri-settings-2-line"></i>Cross-browser
-                      Compatibility
-                    </li>
-                  </ul>
-                </div>
-                <!-- end right -->
+            <div class="content-box">
+              <div class="flex ai-center">
+                <small>01</small><span></span>
+                <h4>WEB DEVELOPMENT</h4>
               </div>
-              <!-- end content-box -->
+              <p>Building modern, responsive web applications.</p>
+              <ul>
+                <li>
+                  <i class="ri-settings-2-line"></i>Vue.js & Nuxt.js
+                  Development
+                </li>
+                <li>
+                  <i class="ri-settings-2-line"></i>Responsive Web Design
+                </li>
+                <li><i class="ri-settings-2-line"></i>API Integration</li>
+                <li>
+                  <i class="ri-settings-2-line"></i>Performance Optimization
+                </li>
+                <li>
+                  <i class="ri-settings-2-line"></i>Cross-browser
+                  Compatibility
+                </li>
+              </ul>
             </div>
           </div>
-          <!-- end col-4 -->
-          <div class="col-md-4 wow fadeIn" data-wow-delay="0.05s">
-            <div class="flex column">
-              <div class="skills__blob2">
-                <img
-                  src="~/assets/images/webflow-icon.svg"
-                  alt="skills image"
-                />
-              </div>
+
+          <div class="service-card wow fadeIn" data-wow-delay="0.05s">
+            <div class="skills__blob2">
+              <img
+                src="~/assets/images/webflow-icon.svg"
+                alt="skills image"
+              />
             </div>
 
-            <div class="content-box flex column jc-center">
+            <div class="content-box">
               <div class="flex ai-center">
                 <small>02</small><span></span>
                 <h4>WEBFLOW EXPERTISE</h4>
               </div>
-              <!-- end left -->
-              <div class="content-box flex column jc-center">
-                <p>Creating stunning websites with Webflow.</p>
-                <ul>
-                  <li>
-                    <i class="ri-settings-2-line"></i>Custom Webflow Development
-                  </li>
-                  <li>
-                    <i class="ri-settings-2-line"></i>CMS Setup & Integration
-                  </li>
-                  <li><i class="ri-settings-2-line"></i>Custom Interactions</li>
-                  <li>
-                    <i class="ri-settings-2-line"></i>E-commerce Solutions
-                  </li>
-                  <li>
-                    <i class="ri-settings-2-line"></i>Client Training & Support
-                  </li>
-                </ul>
-              </div>
-              <!-- end right -->
+              <p>Creating stunning websites with Webflow.</p>
+              <ul>
+                <li>
+                  <i class="ri-settings-2-line"></i>Custom Webflow Development
+                </li>
+                <li>
+                  <i class="ri-settings-2-line"></i>CMS Setup & Integration
+                </li>
+                <li><i class="ri-settings-2-line"></i>Custom Interactions</li>
+                <li>
+                  <i class="ri-settings-2-line"></i>E-commerce Solutions
+                </li>
+                <li>
+                  <i class="ri-settings-2-line"></i>Client Training & Support
+                </li>
+              </ul>
             </div>
-            <!-- end content-box -->
           </div>
-          <!-- end col-4 -->
-          <div class="col-md-4 wow fadeIn" data-wow-delay="0.10s">
-            <div class="flex column">
-              <div class="skills__blob2">
-                <img
-                  src="~/assets/images/google-search-ads.svg"
-                  alt="skills image"
-                />
-              </div>
 
-              <div class="content-box flex column jc-center">
-                <div class="flex ai-center">
-                  <small>03</small><span></span>
-                  <h4>SEO & ANALYTICS</h4>
-                </div>
-                <div class="content-box flex column">
-                  <p>Optimizing websites for maximum visibility.</p>
-                  <ul>
-                    <li>
-                      <i class="ri-settings-2-line"></i>Technical SEO
-                      Implementation
-                    </li>
-                    <li>
-                      <i class="ri-settings-2-line"></i>Google Analytics Setup
-                    </li>
-                    <li>
-                      <i class="ri-settings-2-line"></i>Keyword Research &
-                      Strategy
-                    </li>
-                    <li>
-                      <i class="ri-settings-2-line"></i>Performance Monitoring
-                    </li>
-                    <li>
-                      <i class="ri-settings-2-line"></i>Conversion Rate
-                      Optimization
-                    </li>
-                  </ul>
-                </div>
-                <!-- end right -->
+          <div class="service-card wow fadeIn" data-wow-delay="0.10s">
+            <div class="skills__blob2">
+              <img
+                src="~/assets/images/google-search-ads.svg"
+                alt="skills image"
+              />
+            </div>
+
+            <div class="content-box">
+              <div class="flex ai-center">
+                <small>03</small><span></span>
+                <h4>SEO & ANALYTICS</h4>
               </div>
-              <!-- end content-box -->
+              <p>Optimizing websites for maximum visibility.</p>
+              <ul>
+                <li>
+                  <i class="ri-settings-2-line"></i>Technical SEO
+                  Implementation
+                </li>
+                <li>
+                  <i class="ri-settings-2-line"></i>Google Analytics Setup
+                </li>
+                <li>
+                  <i class="ri-settings-2-line"></i>Keyword Research &
+                  Strategy
+                </li>
+                <li>
+                  <i class="ri-settings-2-line"></i>Performance Monitoring
+                </li>
+                <li>
+                  <i class="ri-settings-2-line"></i>Conversion Rate
+                  Optimization
+                </li>
+              </ul>
             </div>
           </div>
-          <!-- end col-4 -->
         </div>
         <!-- end row -->
       </div>
@@ -918,6 +877,7 @@ article {
   margin-bottom: 2rem;
 }
 
+/* Legacy grid class - no longer needed */
 .bd-grid {
   display: grid;
   gap: 1.5rem;
