@@ -591,6 +591,12 @@ img {
     grid-template-columns: 1fr 4fr;
   }
 
+  .home__info-content p{
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+  
+
   .home__title {
     font-size: 9.5rem;
     top: 25%;
@@ -775,7 +781,7 @@ body.dark-theme {
   }
 
   .home__title {
-    font-size: 5rem;
+    font-size: 3rem;
   }
 }
 
@@ -794,7 +800,7 @@ body.dark-theme {
   }
 
   .home__title {
-    font-size: 6.5rem;
+    font-size: 4.5rem;
   }
   
   .home__social-link {
@@ -813,10 +819,19 @@ body.dark-theme {
 }
 
 @media screen and (min-width: 1048px) {
+  /* .hero .container {
+    margin-inline: 3.5rem;
+    height: 100%;
+  } */
+
   .container {
     margin-inline: auto;
     height: 100%;
   }
+  .home__title {
+    font-size: 6.5rem;
+  }
+
 }
 
 @media screen and (min-width: 1200px) {
@@ -1176,6 +1191,12 @@ body.dark-theme {
 
 .content-box:hover {
   transform: translateY(-5px);
+}
+
+/* Enhanced border for border-center demonstration */
+.content-box.border-center-demo {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 4.5rem; /* Add 2rem extra padding to create space between blob and content */
 }
 
 .content-box .flex.ai-center {
@@ -1592,10 +1613,38 @@ body.dark-theme {
 /*=============== HERO ===============*/
 .hero {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   /* display: flex;
   align-items: center; */
   overflow: hidden;
+}
+
+/* Disable conflicting CSS animations for hero elements */
+.hero-bg,
+.home__info-content p,
+.home__info-content h1,
+.home__info-content .button,
+.social-link {
+  /* Only disable CSS animations, allow GSAP to control */
+  animation: none !important;
+  -webkit-animation: none !important;
+}
+
+/* Allow GSAP to control these elements */
+.hero-bg,
+.home__info-content p,
+.home__info-content h1,
+.home__info-content .button,
+.social-link {
+  will-change: transform, opacity;
+}
+
+/* Hide content initially to prevent flash */
+.home__info-content p,
+.home__info-content h1,
+.home__info-content .button,
+.social-link {
+  opacity: 0;
 }
 
 .hero-bg {
@@ -1832,11 +1881,26 @@ body.dark-theme {
   justify-self: center;
 }
 
+/* Skills blob positioned so content-box border runs through center */
+.skills__blob2.border-center-demo {
+  position: relative;
+  z-index: 10;
+  margin-bottom: -30px; /* Half the height of the blob to center it on the border */
+  margin-top: 30px; /* Add some top margin to account for the negative bottom margin */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 /* Tablet and up - larger blob */
 @media screen and (min-width: 768px) {
   .skills__blob2 {
     width: 70px;
     height: 70px;
+  }
+  
+  .skills__blob2.border-center-demo {
+    margin-bottom: -35px; /* Half the height of the blob */
+    margin-top: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
 
@@ -1845,6 +1909,12 @@ body.dark-theme {
   .skills__blob2 {
     width: 80px;
     height: 80px;
+  }
+  
+  .skills__blob2.border-center-demo {
+    margin-bottom: -40px; /* Half the height of the blob */
+    margin-top: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
 
@@ -2360,7 +2430,7 @@ body.dark-theme {
     height: 80px;
     background-color: var(--container-color);
     border-radius: 3rem;
-    box-shadow: var(--box-shadow-outset);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     display: grid;
     place-items: center;
     margin: 0 auto 1rem;

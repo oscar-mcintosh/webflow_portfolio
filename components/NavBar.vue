@@ -111,12 +111,13 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .nav {
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
 
 .hidden {
   transform: translateY(-100%);
-  display: none;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .animate {

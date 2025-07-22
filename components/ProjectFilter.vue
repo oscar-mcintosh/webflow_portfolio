@@ -138,7 +138,7 @@ const isFiltered = (project) => {
 };
 
 // Add loading state handling
-const isLoading = computed(() => projectStore.isLoading);
+const isLoading = computed(() => projectStore.isProjectLoading);
 
 onMounted(() => {
   // Initial animation setup

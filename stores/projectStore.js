@@ -16,6 +16,7 @@ export const useProjectStore = defineStore('project', () => {
   const previousProject = ref(null);
   const defaultBgColor = '#2a2c39';
   const isLoading = ref(false);
+  const isProjectLoading = ref(false);
   const isInitialized = ref(false);
 
   const fetchAllProjects = async () => {
@@ -46,7 +47,7 @@ export const useProjectStore = defineStore('project', () => {
 
   const fetchProject = async (id) => {
     try {
-      isLoading.value = true;
+      isProjectLoading.value = true;
       const response = await fetch(apiUrl + id, config);
       const data = await response.json();
       currentProject.value = {
@@ -74,7 +75,7 @@ export const useProjectStore = defineStore('project', () => {
       console.error("Error fetching project:", error);
       return null;
     } finally {
-      isLoading.value = false;
+      isProjectLoading.value = false;
     }
   };
 
@@ -104,6 +105,7 @@ export const useProjectStore = defineStore('project', () => {
     previousProject,
     defaultBgColor,
     isLoading,
+    isProjectLoading,
     isInitialized,
     initializeProject,
     getProject,

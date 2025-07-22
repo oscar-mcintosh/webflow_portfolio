@@ -122,7 +122,7 @@
               </button>
             </div>
           </div>
-          
+
           <div class="intro-image wow" data-wow-delay="0.15s">
             <img
               src="~/assets/images/computer-image.svg"
@@ -190,50 +190,43 @@
 
         <div class="services-row">
           <div class="service-card wow fadeIn" data-wow-delay="0s">
-            <div class="skills__blob2">
+            <div class="skills__blob2 border-center-demo">
               <img src="~/assets/images/vue-9.svg" alt="skills image" />
             </div>
 
-            <div class="content-box">
+            <div class="content-box border-center-demo">
               <div class="flex ai-center">
                 <small>01</small><span></span>
                 <h4>WEB DEVELOPMENT</h4>
               </div>
-              <p>Building modern, responsive web applications.</p>
+              <!-- <p>Building modern, responsive web applications.</p> -->
               <ul>
                 <li>
-                  <i class="ri-settings-2-line"></i>Vue.js & Nuxt.js
-                  Development
+                  <i class="ri-settings-2-line"></i>Vue.js & Nuxt.js Development
                 </li>
-                <li>
-                  <i class="ri-settings-2-line"></i>Responsive Web Design
-                </li>
+                <li><i class="ri-settings-2-line"></i>Responsive Web Design</li>
                 <li><i class="ri-settings-2-line"></i>API Integration</li>
                 <li>
                   <i class="ri-settings-2-line"></i>Performance Optimization
                 </li>
                 <li>
-                  <i class="ri-settings-2-line"></i>Cross-browser
-                  Compatibility
+                  <i class="ri-settings-2-line"></i>Cross-browser Compatibility
                 </li>
               </ul>
             </div>
           </div>
 
           <div class="service-card wow fadeIn" data-wow-delay="0.05s">
-            <div class="skills__blob2">
-              <img
-                src="~/assets/images/webflow-icon.svg"
-                alt="skills image"
-              />
+            <div class="skills__blob2 border-center-demo">
+              <img src="~/assets/images/webflow-icon.svg" alt="skills image" />
             </div>
 
-            <div class="content-box">
+            <div class="content-box border-center-demo">
               <div class="flex ai-center">
                 <small>02</small><span></span>
-                <h4>WEBFLOW EXPERTISE</h4>
+                <h4>WEBFLOW EXPERT</h4>
               </div>
-              <p>Creating stunning websites with Webflow.</p>
+              <!-- <p>Creating stunning websites with Webflow.</p> -->
               <ul>
                 <li>
                   <i class="ri-settings-2-line"></i>Custom Webflow Development
@@ -242,9 +235,7 @@
                   <i class="ri-settings-2-line"></i>CMS Setup & Integration
                 </li>
                 <li><i class="ri-settings-2-line"></i>Custom Interactions</li>
-                <li>
-                  <i class="ri-settings-2-line"></i>E-commerce Solutions
-                </li>
+                <li><i class="ri-settings-2-line"></i>E-commerce Solutions</li>
                 <li>
                   <i class="ri-settings-2-line"></i>Client Training & Support
                 </li>
@@ -253,37 +244,34 @@
           </div>
 
           <div class="service-card wow fadeIn" data-wow-delay="0.10s">
-            <div class="skills__blob2">
+            <div class="skills__blob2 border-center-demo">
               <img
                 src="~/assets/images/google-search-ads.svg"
                 alt="skills image"
               />
             </div>
 
-            <div class="content-box">
+            <div class="content-box border-center-demo">
               <div class="flex ai-center">
                 <small>03</small><span></span>
                 <h4>SEO & ANALYTICS</h4>
               </div>
-              <p>Optimizing websites for maximum visibility.</p>
+              <!-- <p>Optimizing websites for maximum visibility.</p> -->
               <ul>
                 <li>
-                  <i class="ri-settings-2-line"></i>Technical SEO
-                  Implementation
+                  <i class="ri-settings-2-line"></i>Technical SEO Implementation
                 </li>
                 <li>
                   <i class="ri-settings-2-line"></i>Google Analytics Setup
                 </li>
                 <li>
-                  <i class="ri-settings-2-line"></i>Keyword Research &
-                  Strategy
+                  <i class="ri-settings-2-line"></i>Keyword Research & Strategy
                 </li>
                 <li>
                   <i class="ri-settings-2-line"></i>Performance Monitoring
                 </li>
                 <li>
-                  <i class="ri-settings-2-line"></i>Conversion Rate
-                  Optimization
+                  <i class="ri-settings-2-line"></i>Conversion Rate Optimization
                 </li>
               </ul>
             </div>
@@ -323,207 +311,6 @@
       </div>
     </section> -->
 
-    <!--==================== SKILLS ====================-->
-    <!-- <section class="skills section" id="experience">
-      <h2 class="section__title">Experience</h2>
-      <span class="section__subtitle"></span>
-
-      <div class="skills__container container grid section__border">
-        <div class="skills__content" data-animate="fadeup">
-          <h3 class="skills__title">
-            <i class="ri-braces-line"></i>Frontend Developer
-          </h3>
-          <div class="skills__info">
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="~/assets/images/html-1.svg" alt="skills image" />
-              </div>
-              <h3 class="skills__name">HTML</h3>
-              <span class="projects__subtitle">Five years</span>
-            </div>
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="~/assets/images/css-3.svg" alt="skills image" />
-              </div>
-              <h3 class="skills__name">CSS</h3>
-              <span class="projects__subtitle">Five years</span>
-            </div>
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img
-                  src="~/assets/images/logo-javascript.svg"
-                  alt="skills image"
-                />
-              </div>
-              <h3 class="skills__name">Javascript</h3>
-              <span class="projects__subtitle">Five years</span>
-            </div>
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="~/assets/images/vue-9.svg" alt="skills image" />
-              </div>
-              <h3 class="skills__name">Vue JS</h3>
-              <span class="projects__subtitle">Five years</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="skills__content" data-animate="fadeup">
-          <h3 class="skills__title">
-            <i class="ri-database-2-line"></i>CMS' and other tools
-          </h3>
-          <div class="skills__info">
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img src="~/assets/images/git-icon.svg" alt="skills image" />
-              </div>
-              <h3 class="skills__name">GIT</h3>
-              <span class="projects__subtitle">Three years</span>
-            </div>
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img
-                  src="~/assets/images/wordpress-icon-1.svg"
-                  alt="skills image"
-                />
-              </div>
-              <h3 class="skills__name">Wordpress</h3>
-              <span class="projects__subtitle">Four years</span>
-            </div>
-            <div class="skills__data">
-              <div class="skills__blob">
-                <img
-                  src="~/assets/images/webflow-icon.svg"
-                  alt="skills image"
-                />
-              </div>
-              <h3 class="skills__name">Webflow</h3>
-              <span class="projects__subtitle">Five years</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <!--==================== SKILLS2 UI FOR LARGER SCREENS ====================-->
-    <!-- <section class="skills2 section" id="experience2">
-      <h2 class="section__title">Experience</h2>
-      <span class="section__subtitle"></span>
-
-      <div class="container flex section__border">
-        <div class="skills__content" data-animate="fadeup">
-          <h3 class="skills__title">
-            <i class="ri-braces-line"></i>Frontend Developer
-          </h3>
-          <div class="skills__info2 p-t">
-            <div class="skills__data2">
-              <div class="skills__data p-l">
-                <h3 class="skills__name">HTML</h3>
-                <span class="projects__subtitle">Five years</span>
-              </div>
-              <div class="skills__blob2 s1">
-                <img src="~/assets/images/html-1.svg" alt="skills image" />
-              </div>
-            </div>
-            <div class="skills__data2">
-              <div class="skills__data">
-                <h3 class="skills__name">CSS</h3>
-                <span class="projects__subtitle">Five years</span>
-              </div>
-              <div class="skills__blob2 s2">
-                <img
-                  src="~/assets/images/interface-icon.svg"
-                  alt="skills image"
-                />
-              </div>
-            </div>
-            <div class="skills__data2">
-              <div class="skills__data">
-                <h3 class="skills__name">Javascript</h3>
-                <span class="projects__subtitle">Five years</span>
-              </div>
-              <div class="skills__blob2 s3">
-                <img
-                  src="~/assets/images/logo-javascript.svg"
-                  alt="skills image"
-                />
-              </div>
-            </div>
-            <div class="skills__data2">
-              <div class="skills__data p-l">
-                <h3 class="skills__name">Vue JS</h3>
-                <span class="projects__subtitle">Five years</span>
-              </div>
-              <div class="skills__blob2 s4">
-                <img src="~/assets/images/vue-9.svg" alt="skills image" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="skills__blob-large">
-          <div class="skills__blob-inset">
-            <div class="skills__blob-inset-img">
-              <img src="~/assets/images/logo2.svg" alt="242 logo" />
-            </div>
-          </div>
-        </div>
-
-        <div class="skills__content" data-animate="fadeup">
-          <h3 class="skills__title">
-            <i class="ri-database-2-line"></i>CMS' and other tools
-          </h3>
-          <div class="skills__info2 p-t">
-            <div class="skills__data2">
-              <div class="skills__blob2 s5">
-                <img src="~/assets/images/git-icon.svg" alt="skills image" />
-              </div>
-              <div class="skills__data p-r">
-                <h3 class="skills__name">GIT</h3>
-                <span class="projects__subtitle">Three years</span>
-              </div>
-            </div>
-            <div class="skills__data2">
-              <div class="skills__blob2 s6">
-                <img
-                  src="~/assets/images/wordpress-icon-1.svg"
-                  alt="skills image"
-                />
-              </div>
-              <div class="skills__data p-l">
-                <h3 class="skills__name">Wordpress</h3>
-                <span class="projects__subtitle">Four years</span>
-              </div>
-            </div>
-            <div class="skills__data2">
-              <div class="skills__blob2 s7">
-                <img
-                  src="~/assets/images/webflow-icon.svg"
-                  alt="skills image"
-                />
-              </div>
-              <div class="skills__data p-r p-l">
-                <h3 class="skills__name">Webflow</h3>
-                <span class="projects__subtitle">Five years</span>
-              </div>
-            </div>
-
-            <div class="skills__data2 p-r">
-              <div class="skills__blob2 s8">
-                <img
-                  src="~/assets/images/google-search-ads.svg"
-                  alt="skills image"
-                />
-              </div>
-              <div class="skills__data">
-                <h3 class="skills__name">SEO</h3>
-                <span class="projects__subtitle">Five years</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
     <!--==================== CONTACT ====================-->
     <section class="contact section" id="contact">
       <ContactForm />
@@ -539,6 +326,19 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
+
+// Start hero background animation immediately when GSAP is available
+// This runs before the component mounts, so the animation starts as soon as possible
+if (typeof window !== "undefined") {
+  // Use requestAnimationFrame to ensure DOM is ready
+  requestAnimationFrame(() => {
+    gsap.to(".hero-bg", {
+      scale: 1,
+      duration: 1.5,
+      ease: "power2.out",
+    });
+  });
+}
 const { $posthog } = useNuxtApp();
 if ($posthog) {
   const posthog = $posthog();
@@ -552,24 +352,20 @@ onMounted(async () => {
     await projectStore.fetchAllProjects();
   }
 
-  // Create a master timeline for all animations
+  // Initialize other animations
+  // Create a master timeline for content animations
   const masterTl = gsap.timeline({
     defaults: { ease: "power2.out" },
   });
 
-  // Initial states
-  gsap.set(".hero-bg", { scale: 1.1, opacity: 1 });
-  gsap.set(".home__info-content p", { opacity: 0, y: 20 });
-  gsap.set(".home__info-content h1", { opacity: 0, y: 20 });
-  gsap.set(".home__info-content .button", { opacity: 0, y: 20 });
-  gsap.set(".social-link", { opacity: 0, y: -10 });
+  // Initial states for content elements
+  gsap.set(".home__info-content p", { y: 20 });
+  gsap.set(".home__info-content h1", { y: 20 });
+  gsap.set(".home__info-content .button", { y: 20 });
+  gsap.set(".social-link", { y: -10 });
 
-  // Hero section animations
+  // Content animations with slight delay to let hero-bg start first
   masterTl
-    .to(".hero-bg", {
-      scale: 1,
-      duration: 1.2,
-    })
     .to(
       ".home__info-content p",
       {
@@ -577,8 +373,9 @@ onMounted(async () => {
         y: 0,
         duration: 0.8,
         stagger: 0.2,
+        ease: "power2.out",
       },
-      "-=0.8"
+      0.2 // Start after hero-bg begins
     )
     .to(
       ".home__info-content h1",
@@ -587,8 +384,9 @@ onMounted(async () => {
         y: 0,
         duration: 0.8,
         stagger: 0.2,
+        ease: "power2.out",
       },
-      "-=0.4"
+      0.4
     )
     .to(
       ".home__info-content .button",
@@ -596,8 +394,9 @@ onMounted(async () => {
         opacity: 1,
         y: 0,
         duration: 0.8,
+        ease: "power2.out",
       },
-      "-=0.4"
+      0.6
     )
     .to(
       ".social-link",
@@ -606,8 +405,9 @@ onMounted(async () => {
         y: 0,
         duration: 0.8,
         stagger: 0.2,
+        ease: "power2.out",
       },
-      "-=0.4"
+      0.8
     );
 
   // Scroll animations for fadeIn elements
@@ -617,8 +417,8 @@ onMounted(async () => {
       ? parseFloat(element.getAttribute("data-wow-delay"))
       : 0;
 
-    // Set initial state
-    gsap.set(element, { opacity: 0, y: 30 });
+    // Set initial state and clear any existing animations
+    gsap.set(element, { opacity: 0, y: 30, clearProps: "all" });
 
     gsap.to(element, {
       opacity: 1,
@@ -639,7 +439,7 @@ onMounted(async () => {
   // Scroll animations for content boxes
   const contentBoxes = document.querySelectorAll(".content-box");
   contentBoxes.forEach((box) => {
-    gsap.set(box, { opacity: 0, y: 30 });
+    gsap.set(box, { opacity: 0, y: 30, clearProps: "all" });
 
     gsap.to(box, {
       opacity: 1,
@@ -659,7 +459,7 @@ onMounted(async () => {
   // Special handling for intro section
   const introElements = document.querySelectorAll(".intro .wow");
   introElements.forEach((element, index) => {
-    gsap.set(element, { opacity: 0, y: 30 });
+    gsap.set(element, { opacity: 0, y: 30, clearProps: "all" });
 
     gsap.to(element, {
       opacity: 1,
@@ -720,6 +520,35 @@ article {
   will-change: transform, opacity;
 }
 
+/* Disable conflicting CSS animations for hero elements */
+.hero-bg,
+.home__info-content p,
+.home__info-content h1,
+.home__info-content .button,
+.social-link {
+  /* Only disable CSS animations, allow GSAP to control */
+  animation: none !important;
+  -webkit-animation: none !important;
+}
+
+/* Allow GSAP to control these elements */
+.hero-bg,
+.home__info-content p,
+.home__info-content h1,
+.home__info-content .button,
+.social-link {
+  will-change: transform, opacity;
+  transform-origin: center center;
+}
+
+/* Hide content initially to prevent flash */
+.home__info-content p,
+.home__info-content h1,
+.home__info-content .button,
+.social-link {
+  opacity: 0;
+}
+
 .custom-link {
   display: flex;
   gap: 1rem;
@@ -755,6 +584,8 @@ article {
   background-color: #1a1a1a;
   color: #fff;
   overflow: hidden;
+  /* display: flex; */
+  align-items: center;
 }
 
 .hero-bg {
@@ -767,15 +598,40 @@ article {
     url("~/assets/images/twofourtwo_hero.webp") center center no-repeat;
   background-size: cover;
   z-index: 1;
+  transform: scale(1.1); /* Initial state - starts scaled up */
+  transform-origin: center center;
 }
 
-/* .hero-content {
-  margin-top: 0;
-  max-width: 800px;
-  margin-left: 0;
-  margin-right: auto;
-  text-align: left;
-} */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+/* Override container margin for hero section to match other sections */
+.hero .container {
+  margin-inline: 1.5rem;
+}
+
+/* Responsive overrides to match other sections */
+@media screen and (min-width: 576px) {
+  .hero .container {
+    margin-inline: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 1048px) {
+  .hero .container {
+    margin-inline: auto;
+    /* padding: 0 15%; */
+    /* margin-inline: 15rem; */
+  }
+}
 
 .hero-content h1 {
   margin-bottom: 3rem;
@@ -833,8 +689,11 @@ article {
 
 @media (max-width: 768px) {
   .hero-content {
-    margin-top: 0;
+    flex-direction: column;
+    justify-content: center;
     text-align: left;
+    gap: 2rem;
+    padding: 1rem 0;
   }
 
   .hero-content .title {
@@ -853,6 +712,39 @@ article {
     flex-direction: row;
     justify-content: center;
     margin-top: 2rem;
+  }
+
+  .home__info-content {
+    text-align: center;
+  }
+
+  .home__info-content h1 {
+    margin-bottom: 1rem;
+  }
+
+  .home__info-content p {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 0.5rem 0;
+    gap: 1.5rem;
+  }
+
+  .home__info-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .home__info-content p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .social-links {
+    margin-top: 1rem;
   }
 }
 

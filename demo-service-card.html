@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Card Border Center Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0e0e0e;
+            color: #fff;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .demo-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+        }
+
+        .services-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Current design */
+        .service-card.current .skills__blob2 {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #2a2c39;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .service-card.current .content-box {
+            padding: 2.5rem 1.5rem;
+            border-radius: 0.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100%;
+        }
+
+        /* Border center demo */
+        .service-card.border-center .skills__blob2 {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #2a2c39;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+            margin-bottom: -40px; /* Half the height to center on border */
+            margin-top: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .service-card.border-center .content-box {
+            padding: 4.5rem 1.5rem 2.5rem 1.5rem; /* Extra padding-top for space between blob and content */
+            border-radius: 0.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100%;
+        }
+
+        .skills__blob2 img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+
+        .content-box h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .content-box p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #ccc;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content-box ul li {
+            font-size: 0.95rem;
+            color: #ccc;
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .content-box ul li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #00e1d0;
+        }
+
+        .demo-label {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #00e1d0;
+        }
+
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .comparison {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <h1 class="demo-title">Service Card Border Center Demo</h1>
+        
+        <div class="comparison">
+            <!-- Current Design -->
+            <div>
+                <div class="demo-label">Current Design</div>
+                <div class="service-card current">
+                    <div class="skills__blob2">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIwIDRDMjkuNTQ0NyA0IDM3IDExLjQ1NTMgMzcgMjFDMzcgMzAuNTQ0NyAyOS41NDQ3IDM4IDIwIDM4QzEwLjQ1NTMgMzggMyAzMC41NDQ3IDMgMjFDMyAxMS40NTUzIDEwLjQ1NTMgNCAyMCA0WiIgZmlsbD0iIzAwZTFkMCIvPgo8L3N2Zz4K" alt="Vue.js" />
+                    </div>
+                    <div class="content-box">
+                        <h4>WEB DEVELOPMENT</h4>
+                        <p>Building modern, responsive web applications.</p>
+                        <ul>
+                            <li>Vue.js & Nuxt.js Development</li>
+                            <li>Responsive Web Design</li>
+                            <li>API Integration</li>
+                            <li>Performance Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Border Center Demo -->
+            <div>
+                <div class="demo-label">Border Center Demo</div>
+                <div class="service-card border-center">
+                    <div class="skills__blob2">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIwIDRDMjkuNTQ0NyA0IDM3IDExLjQ1NTMgMzcgMjFDMzcgMzAuNTQ0NyAyOS41NDQ3IDM4IDIwIDM4QzEwLjQ1NTMgMzggMyAzMC41NDQ3IDMgMjFDMyAxMS40NTUzIDEwLjQ1NTMgNCAyMCA0WiIgZmlsbD0iIzAwZTFkMCIvPgo8L3N2Zz4K" alt="Vue.js" />
+                    </div>
+                    <div class="content-box">
+                        <h4>WEB DEVELOPMENT</h4>
+                        <p>Building modern, responsive web applications.</p>
+                        <ul>
+                            <li>Vue.js & Nuxt.js Development</li>
+                            <li>Responsive Web Design</li>
+                            <li>API Integration</li>
+                            <li>Performance Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 3rem; text-align: center; color: #ccc;">
+            <p><strong>Key Changes:</strong></p>
+            <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                <li>• Skills blob positioned with negative margin-bottom</li>
+                <li>• Content box border enhanced for visibility</li>
+                <li>• Blob appears to "float" on the content box border</li>
+                <li>• Creates a more integrated, layered design effect</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html> 

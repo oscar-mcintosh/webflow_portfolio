@@ -106,7 +106,7 @@
         </div>
       </div>
     </div>
-    <span class="spinner" v-else><Spinner /></span>
+    <span class="spinner" v-else-if="projectStore.isProjectLoading"><Spinner /></span>
   </div>
 </template>
 
