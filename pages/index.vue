@@ -74,11 +74,20 @@
             </div>
           </div>
           <div class="social-links">
-            <a href="#" class="social-link"><i class="ri-facebook-fill"></i></a>
-            <a href="#" class="social-link"
-              ><i class="ri-instagram-line"></i
+            <a
+              href="https://www.linkedin.com/in/oscar-mcintosh"
+              class="social-link"
+              target="_blank"
+              aria-label="Visit my LinkedIn page"
+              ><i class="ri-linkedin-box-line"></i
             ></a>
-            <a href="#" class="social-link"><i class="ri-telegram-fill"></i></a>
+            <a
+              href="https://github.com/oscar-mcintosh"
+              class="social-link"
+              target="_blank"
+              aria-label="Visit my GitHub page"
+              ><i class="ri-github-line"></i
+            ></a>
           </div>
         </div>
       </div>
