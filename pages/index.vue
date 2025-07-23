@@ -619,7 +619,7 @@ article {
   justify-content: flex-start;
   align-items: center;
   min-height: 100vh;
-  padding: 2rem 0;
+  /* padding: 2rem 0; */
 }
 
 /* Override container margin for hero section to match other sections */
@@ -643,7 +643,7 @@ article {
 }
 
 .hero-content h1 {
-  margin-bottom: 3rem;
+  /* margin-bottom: 3rem; */
 }
 
 .hero-content .subtitle {
@@ -702,7 +702,7 @@ article {
     justify-content: center;
     text-align: left;
     gap: 2rem;
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
   }
 
   .hero-content .title {
@@ -714,6 +714,7 @@ article {
   }
 
   .social-links {
+    display: none;
     position: relative;
     left: 0;
     top: 0;
@@ -728,7 +729,7 @@ article {
   }
 
   .home__info-content h1 {
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
   }
 
   .home__info-content p {
@@ -754,6 +755,7 @@ article {
 
   .social-links {
     margin-top: 1rem;
+    display: none;
   }
 }
 
@@ -775,7 +777,7 @@ article {
 }
 
 .hero-content h1 {
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 }
 
 /* Legacy grid class - no longer needed */
