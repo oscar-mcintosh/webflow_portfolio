@@ -1,62 +1,6 @@
 <template>
   <main class="main">
     <!--==================== HOME ====================-->
-    <!-- 
-    <section class="home section" id="home">
-      <div class="container">
-        <div class="home__container grid">
-          <div class="home__info">
-            <div class="home__info-content">
-              <p class="home__title-1">Webflow Professional</p>
-              <h1 data-text="Oscar" class="home__title home__title-1">Oscar</h1>
-              <h1 data-text="McIntosh" class="home__title home__title-1">
-                McIntosh
-              </h1>
-              <p class="home__title-1">Freelancer and subcontractor</p>
-            </div>
-          </div>
-
-          <div class="home__data grid">
-            <div class="home__blob">
-              <div class="home__perfil">
-                <img
-                  fetchpriority="high"
-                  src="~/assets/images/portfolio_pic.webp"
-                  alt="picture of man staring"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="home__social-wrap">
-          <div class="image-half-round-shape"></div>
-          <ul class="home__social">
-            <li class="home__social-link">
-              <a
-                href="www.linkedin.com/in/oscar-mcintosh"
-                aria-label="Visit my linkedin page"
-                target="_blank"
-              >
-                <i class="ri-linkedin-box-line"></i>
-              </a>
-            </li>
-
-            <li class="wave-btn">
-              <div class="ripple"><i class="ri-arrow-down-s-line"></i></div>
-            </li>
-            <li class="home__social-link">
-              <a
-                href="https://github.com/oscar-mcintosh"
-                aria-label="Visit my Github page"
-                target="_blank"
-              >
-                <i class="ri-github-line"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section> -->
 
     <section class="hero">
       <div class="hero-bg"></div>

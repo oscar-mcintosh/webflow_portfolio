@@ -94,11 +94,16 @@ img {
   height: auto;
 }
 
+button{
+  border: none;
+}
+
 
 .grid {
   display: grid;
   gap: 1.5rem;
 }
+
 
 .section {
   padding-block: 4rem;
@@ -996,7 +1001,7 @@ body.dark-theme {
 .projects-intro {
   /* text-align: center; */
   max-width: 800px;
-  margin: 60px 0;
+  margin: 60px 0 0;
 }
 
 
@@ -1333,14 +1338,14 @@ body.dark-theme {
 
 
   
-  .projects__img {
+  /* .projects__img {
     height: 200px;
     object-fit: cover;
-  }
+  } */
 
   .projects-intro {
     /* text-align: center; */
-    max-width: 800px;
+    max-width: 700px;
     /* margin: 60px 0; */
   }
 
@@ -2654,7 +2659,7 @@ body.dark-theme {
   
   .projects__container {
     grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+    /* gap: 2.5rem; */
   }
   
   .skills__container {
@@ -2829,10 +2834,10 @@ body.dark-theme {
     row-gap: 4rem;
   }
   
-  .projects__container {
+  /* .projects__container {
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
-  }
+  } */
   
   .skills2 {
     display: block;
@@ -3008,10 +3013,10 @@ body.dark-theme {
     padding: 6rem 0;
   }
   
-  .services-title {
+  /* .services-title {
     font-size: 4rem;
     margin-bottom: 4rem;
-  }
+  } */
   
   .content-box {
     grid-template-rows: auto auto 1fr;
@@ -3108,7 +3113,7 @@ body.dark-theme {
   }
   
   .services-title {
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin-bottom: 4rem;
   }
   
@@ -3156,7 +3161,7 @@ body.dark-theme {
 /*=============== TYPICAL BREAKPOINTS ===============*/
 
 /* Extra small devices (phones, 576px and up) */
-@media screen and (min-width: 576px) {
+@media screen and (max-width: 576px) {
 .container {
   max-width: 500px;
   margin-inline: auto;
@@ -3165,7 +3170,7 @@ body.dark-theme {
 }
 
 /* Small devices (landscape phones, 768px and up) */
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   /* Add your styles here */
   /*=============== REUSABLE CSS CLASSES ===============*/
   .container {
@@ -3183,7 +3188,7 @@ body.dark-theme {
 }
 
 /* Medium devices (tablets, 992px and up) */
-@media screen and (min-width: 992px) {
+@media screen and (max-width: 992px) {
   /* Add your styles here */
   /*=============== REUSABLE CSS CLASSES ===============*/
   .container {
@@ -3191,24 +3196,25 @@ body.dark-theme {
     margin-inline: auto;
   }
 
-  .services-row {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-top: 5rem;
-  } 
 
 
 }
 
 /* Large devices (desktops, 1200px and up) */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1100px) {
   /* Add your styles here */
   /*=============== REUSABLE CSS CLASSES ===============*/
-.container {
-  max-width: 1100px;
-  margin-inline: auto;
-}
-
+  .container {
+    max-width: 1100px;
+    margin-inline: auto;
+  }
+  
+  .services-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 5rem;
+  } 
+  
 }
 
 /* Extra large devices (large desktops, 1400px and up) */
@@ -3226,10 +3232,11 @@ body.dark-theme {
 @media screen and (min-width: 2560px) {
   /* Add your styles here */
   /*=============== REUSABLE CSS CLASSES ===============*/
-.container {
+/* .container {
   max-width: 1600px;
   margin-inline: 1.5rem;
-}
+} */
 
 }
+
 
