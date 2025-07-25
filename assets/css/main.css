@@ -359,7 +359,7 @@ body.dark-theme {
     align-items: center;
     row-gap: .25rem;
     font-size: var(--small-font-size);
-    /* color: var(--title-color); */
+    color: var(--title-color);
     transition: color .3s;
 }
 
@@ -1096,7 +1096,7 @@ body.dark-theme {
 }
 
 /* For medium devices */
-@media screen and (min-width: 576px) {
+/* @media screen and (min-width: 576px) {
 
   .section {
     padding-block: 2.5rem;
@@ -1134,7 +1134,7 @@ body.dark-theme {
     justify-content: center;
   }
 
-}
+} */
 
 @media screen and (min-width: 767px) {
 
