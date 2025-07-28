@@ -6,7 +6,7 @@
       <div class="hero-bg"></div>
       <div class="container">
         <div class="hero-content">
-          <div class="home__container grid">
+          <div class="home__container">
             <div class="home__info">
               <div class="home__info-content">
                 <p class="home__title-1">Oscar McIntosh</p>
@@ -38,58 +38,8 @@
     </section>
 
     <!--==================== ABOUT ====================-->
-    <section class="intro" id="about">
-      <!-- <div class="pattern-bg"></div> -->
-      <div class="container">
-        <div class="wow fadeIn wow fadeIn projects-intro">
-          <h6>The Two Forty Two Dev</h6>
-          <h2>Custom Web Technology to Meet Your Digital Needs</h2>
-        </div>
 
-        <div class="intro-content">
-          <div class="intro-text wow" data-wow-delay="0.10s">
-            <p>
-              Hello! My name is Oscar McIntosh. I'm a Freelance and Contract
-              Frontend, Webflow, Web Developer based in the heart of Lincoln,
-              Nebraska, and passion for crafting beautiful and functional
-              websites. With six years of hands-on experience under my belt,
-              I've honed my skills in HTML, CSS, JavaScript, and Vue.js.
-            </p>
-            <p>
-              My specialization lies in Webflow, where I bring creativity and
-              precision together to bring concepts to life. From sleek designs
-              to seamless user experiences, I thrive on turning visions into
-              reality, pixel by pixel.
-            </p>
-            <p>
-              Let's collaborate and transform your digital presence into
-              something truly extraordinary.
-            </p>
-
-            <div class="custom-link wow">
-              <NuxtLink to="/resume" class="button">
-                <b>VIEW RESUME</b>
-              </NuxtLink>
-              <button @click="downloadResume" class="button download-button">
-                <b>DOWNLOAD RESUME</b>
-              </button>
-            </div>
-          </div>
-
-          <div class="intro-image wow" data-wow-delay="0.15s">
-            <img
-              src="~/assets/images/computer-image.svg"
-              alt="Computer illustration"
-            />
-          </div>
-        </div>
-        <!-- end row -->
-      </div>
-      <!-- end container -->
-    </section>
-    <!-- end intro -->
-
-    <!-- <section class="about section" id="about">
+    <section class="about section" id="about">
       <div class="about__container container grid section__border">
         <div class="about__data">
           <h2 class="section__title">
@@ -126,22 +76,113 @@
             Let's collaborate and transform your digital presence into something
             truly extraordinary.
           </p>
-          <a href="#contact" class="button">Contact Me</a>
+          <!-- <a href="#contact" class="button">Contact Me</a> -->
+        </div>
+        <div class="custom-link wow">
+          <NuxtLink to="/resume" class="button">
+            <b>VIEW RESUME</b>
+          </NuxtLink>
+          <button @click="downloadResume" class="button download-button">
+            <b>DOWNLOAD RESUME</b>
+          </button>
         </div>
       </div>
-    </section> -->
+    </section>
 
-    <!--==================== SERVICES ====================-->
-    <section class="services-content-block" id="experience2">
-      <div class="video-bg"></div>
-      <!-- end video-bg -->
-      <div class="container">
-        <div class="col-lg-6 wow fadeIn services-intro" data-wow-delay="0.2s">
-          <h6>How we can be helpful</h6>
-          <h2 class="services-title">UX/UI design & web development</h2>
+    <!--==================== SKILLS ====================-->
+    <section class="skills section" id="skills">
+      <div class="skills__container container grid section__border">
+        <h2 class="section__title">Skills</h2>
+        <span class="section__subtitle"></span>
+
+        <div class="skills__content" data-animate="fadeup">
+          <h3 class="skills__title">
+            <i class="ri-braces-line"></i>Frontend Developer
+          </h3>
+          <div class="skills__info">
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="~/assets/images/html-1.svg" alt="skills image" />
+              </div>
+              <h3 class="skills__name">HTML</h3>
+              <span class="projects__subtitle">Seven years</span>
+            </div>
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="~/assets/images/css-3.svg" alt="skills image" />
+              </div>
+              <h3 class="skills__name">CSS</h3>
+              <span class="projects__subtitle">Seven years</span>
+            </div>
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img
+                  src="~/assets/images/logo-javascript.svg"
+                  alt="skills image"
+                />
+              </div>
+              <h3 class="skills__name">Javascript</h3>
+              <span class="projects__subtitle">Seven years</span>
+            </div>
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="~/assets/images/vue-9.svg" alt="skills image" />
+              </div>
+              <h3 class="skills__name">Vue JS</h3>
+              <span class="projects__subtitle">Five years</span>
+            </div>
+          </div>
         </div>
 
-        <div class="services-row">
+        <div class="skills__content" data-animate="fadeup">
+          <h3 class="skills__title">
+            <i class="ri-database-2-line"></i>CMS' and other tools
+          </h3>
+          <div class="skills__info">
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img src="~/assets/images/git-icon.svg" alt="skills image" />
+              </div>
+              <h3 class="skills__name">GIT</h3>
+              <span class="projects__subtitle">Three years</span>
+            </div>
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img
+                  src="~/assets/images/wordpress-icon-1.svg"
+                  alt="skills image"
+                />
+              </div>
+              <h3 class="skills__name">Wordpress</h3>
+              <span class="projects__subtitle">Four years</span>
+            </div>
+            <div class="skills__data">
+              <div class="skills__blob">
+                <img
+                  src="~/assets/images/webflow-icon.svg"
+                  alt="skills image"
+                />
+              </div>
+              <h3 class="skills__name">Webflow</h3>
+              <span class="projects__subtitle">Five years</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--==================== SERVICES ====================-->
+    <!-- <section id="experience2">
+      <div class="video-bg"></div>
+      <div class="container">
+        <div class="col-lg-6 wow fadeIn services-intro" data-wow-delay="0.2s">
+          <h6 class="section__subtitle">How we can be helpful</h6>
+          <h2 class="services-title section__title">
+            UX/UI design & web development
+          </h2>
+        </div>
+
+        <div class="services-row grid projects__container skills__info">
           <div class="service-card wow fadeIn" data-wow-delay="0s">
             <div class="skills__blob2 border-center-demo">
               <img src="~/assets/images/vue-9.svg" alt="skills image" />
@@ -152,7 +193,6 @@
                 <small>01</small><span></span>
                 <h4>WEB DEVELOPMENT</h4>
               </div>
-              <!-- <p>Building modern, responsive web applications.</p> -->
               <ul>
                 <li>
                   <i class="ri-settings-2-line"></i>Vue.js & Nuxt.js Development
@@ -179,7 +219,6 @@
                 <small>02</small><span></span>
                 <h4>WEBFLOW EXPERT</h4>
               </div>
-              <!-- <p>Creating stunning websites with Webflow.</p> -->
               <ul>
                 <li>
                   <i class="ri-settings-2-line"></i>Custom Webflow Development
@@ -209,7 +248,6 @@
                 <small>03</small><span></span>
                 <h4>SEO & ANALYTICS</h4>
               </div>
-              <!-- <p>Optimizing websites for maximum visibility.</p> -->
               <ul>
                 <li>
                   <i class="ri-settings-2-line"></i>Technical SEO Implementation
@@ -230,19 +268,17 @@
             </div>
           </div>
         </div>
-        <!-- end row -->
       </div>
-      <!-- end container -->
-    </section>
+    </section> -->
 
     <!--==================== PORTFOLIO ====================-->
 
-    <section class="works" id="portfolio">
-      <div class="container">
+    <section class="works section" id="portfolio">
+      <div class="container section__border">
         <div class="row">
           <div class="col-12 wow fadeIn projects-intro">
-            <h6>SMOOTH INTERFACE INTERACTION</h6>
-            <h2>My selected works and portfolio</h2>
+            <h6 class="section__subtitle">SMOOTH INTERFACE INTERACTION</h6>
+            <h2 class="section__title">My selected works and portfolio</h2>
           </div>
           <!-- end col-12 -->
           <div class="col-12">
@@ -255,14 +291,6 @@
       </div>
       <!-- end container -->
     </section>
-
-    <!-- <section class="projects section" id="portfolio">
-      <h2 class="section__title">Portfolio</h2>
-      <span class="section__subtitle"></span>
-      <div>
-        <ProjectFilter />
-      </div>
-    </section> -->
 
     <!--==================== CONTACT ====================-->
     <section class="contact section" id="contact">
@@ -524,7 +552,7 @@ article {
 }
  */
 .download-button {
-  background: #333;
+  background: var(--accent-color);
 }
 
 .download-button:hover {

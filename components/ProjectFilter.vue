@@ -19,7 +19,7 @@
         </button>
       </div>
 
-      <div class="projects__container container grid section__border">
+      <div class="projects__container container grid">
         <template v-if="filteredProjects.length > 0">
           <article
             v-for="(project, index) in filteredProjects"
@@ -37,28 +37,19 @@
             </NuxtLink>
 
             <div class="project__info">
-              <NuxtLink
-                :to="`/projects/${project.id}`"
-                class="link"
-                :style="{ '--project-color': project.bg_color }"
-              >
-                <h3
-                  class="projects__title"
-                  :style="{ color: project.bg_color }"
-                >
-                  {{ project.name }}
-                </h3>
-              </NuxtLink>
-              <p class="projects__subtitle">
+              <h3 class="projects__title" :style="{ color: project.bg_color }">
+                {{ project.name }}
+              </h3>
+              <!-- <p class="projects__subtitle">
                 {{ project.subtitle }}
-              </p>
+              </p> -->
               <div class="custom-link">
                 <NuxtLink
                   :to="`/projects/${project.id}`"
                   class="link"
                   :style="{ '--project-color': project.bg_color }"
                 >
-                  <div class="lines"><span></span> <span></span></div>
+                  <!-- <div class="lines"><span></span> <span></span></div> -->
                   View Project
                 </NuxtLink>
               </div>
@@ -261,6 +252,13 @@ watch(
   will-change: transform, opacity;
 }
 
+.link {
+  border-bottom: 2px solid;
+  border-color: var(--project-color);
+  color: var(--text-color);
+  padding: 5px;
+}
+
 @media screen and (min-width: 600px) {
   .projects-gallery-filter-nav {
     display: flex;
@@ -269,11 +267,6 @@ watch(
     flex-wrap: wrap;
     gap: 10px;
   }
-}
-
-.link {
-  border-bottom: 2px solid;
-  border-color: var(--project-color);
 }
 
 /* Add some spacing between items for better scroll experience */
@@ -292,5 +285,9 @@ watch(
   text-align: center;
   padding: 2rem;
   color: var(--text-color);
+}
+
+.project__info {
+  margin-top: 10px;
 }
 </style>
