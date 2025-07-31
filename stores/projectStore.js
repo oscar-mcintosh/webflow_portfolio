@@ -27,7 +27,8 @@ export const useProjectStore = defineStore('project', () => {
       allProjects.value = data.records.map((record) => ({
         id: record.id,
         name: record.fields.Name,
-        image: record.fields.fullPage?.[0]?.url || null,
+        image: record.fields.heroImage?.[0]?.url || null,
+        fullPage: record.fields.fullPage?.[0]?.url || null,
         link: record.fields.demoLink,
         github: record.fields.githubLink,
         description: record.fields.description,
@@ -53,7 +54,8 @@ export const useProjectStore = defineStore('project', () => {
       currentProject.value = {
         id: data.id,
         name: data.fields.Name,
-        image: data.fields.fullPage?.[0]?.url || null,
+        image: data.fields.heroImage?.[0]?.url || null,
+        fullPage: data.fields.fullPage?.[0]?.url || null,
         link: data.fields.demoLink,
         github: data.fields.githubLink,
         description: data.fields.description,

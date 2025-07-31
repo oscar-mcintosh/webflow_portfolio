@@ -754,12 +754,12 @@ body.dark-theme {
 /* For large devices */
 
 
- */
 
   .container {
     margin-inline: auto;
     height: 100%;
   }
+  
   .home__title {
     font-size: 6.5rem;
   }

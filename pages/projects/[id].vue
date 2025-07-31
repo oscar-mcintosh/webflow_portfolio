@@ -1,25 +1,45 @@
 <template>
   <div class="projects section main">
+    <div class="bg__image" v-if="projectStore.currentProject">
+      <img :src="projectStore.currentProject.image" alt="" />
+    </div>
+    <div class="bg__blur" v-if="projectStore.currentProject"></div>
     <div
       class="project-details-section section-gap-tb-165"
       v-if="projectStore.currentProject"
     >
       <div class="project-details-box">
         <div class="container">
-          <div class="col-12">
-            <div class="project-hero-image">
-              <img :src="projectStore.currentProject.image" alt="" />
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="project-content-section pos-relative">
-                <!-- <div class="project-hero-image">
-                                        <img :src="project.image" alt="">
-                                    </div> -->
+          <!-- Project Navigation at the top -->
+          <!-- <div class="project-navigation-top">
+             <NuxtLink
+               v-if="projectStore.previousProject"
+               :to="`/projects/${projectStore.previousProject.id}`"
+               class="nav-link prev"
+             >
+               <span class="arrow">←</span>
+               <span class="text">Previous Project</span>
+             </NuxtLink>
+             
+              <div class="nav-logo-center">
+                <NuxtLink to="/" class="nav-logo-link">
+                  <img src="/assets/images/logo2.svg" alt="Logo" class="nav-logo" />
+                </NuxtLink>
+              </div>
+             
+             <NuxtLink
+               v-if="projectStore.nextProject"
+               :to="`/projects/${projectStore.nextProject.id}`"
+               class="nav-link next"
+             >
+               <span class="text">Next Project</span>
+               <span class="arrow">→</span>
+             </NuxtLink>
+           </div> -->
 
+          <div class="row project-layout">
+            <div class="col-12 project-details">
+              <div class="project-content-section pos-relative">
                 <div class="row">
                   <div class="col-lg-8">
                     <div class="default-content-style pos-relative">
@@ -69,44 +89,22 @@
                             >
                           </span>
                         </li>
-                        <span v-else></span>
                       </ul>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="next_project">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="project-navigation">
-                <NuxtLink
-                  v-if="projectStore.previousProject"
-                  :to="`/projects/${projectStore.previousProject.id}`"
-                  class="nav-link prev"
-                >
-                  <span class="arrow">←</span>
-                  <span class="text">Previous Project</span>
-                </NuxtLink>
-                <NuxtLink
-                  v-if="projectStore.nextProject"
-                  :to="`/projects/${projectStore.nextProject.id}`"
-                  class="nav-link next"
-                >
-                  <span class="text">Next Project</span>
-                  <span class="arrow">→</span>
-                </NuxtLink>
-              </div>
+            <div class="project-hero-image">
+              <img :src="projectStore.currentProject.fullPage" alt="" />
             </div>
           </div>
         </div>
       </div>
     </div>
-    <span class="spinner" v-else-if="projectStore.isProjectLoading"><Spinner /></span>
+    <span class="spinner" v-else-if="projectStore.isProjectLoading"
+      ><Spinner
+    /></span>
   </div>
 </template>
 
@@ -150,20 +148,97 @@ definePageMeta({
   width: 100%;
 }
 
-.pos-relative {
-  position: relative;
+/* Project layout styles */
+.project-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.project-details {
+  flex: 1;
+  min-width: 0; /* Prevents flex item from overflowing */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  /* background: rgba(var(--container-color), 0.2); */
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  padding: 60px 40px 75px 40px;
+  margin-bottom: 100px;
 }
 
 .project-hero-image {
-  margin: 40px 0 65px;
-  overflow: hidden;
+  position: sticky;
+  top: 100px;
+  flex: 0 0 400px;
+  height: 500px;
+  overflow-y: auto;
   border: 2px solid var(--body-color);
   border-radius: 10px;
+  margin: 0;
+  scrollbar-width: thin;
+  scrollbar-color: v-bind(
+      "projectStore.currentProject?.bg_color || projectStore.defaultBgColor"
+    )
+    white;
+}
+
+.project-hero-image::-webkit-scrollbar {
+  width: 8px;
+}
+
+.project-hero-image::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 4px;
+}
+
+.project-hero-image::-webkit-scrollbar-thumb {
+  background-color: v-bind(
+    "projectStore.currentProject?.bg_color || projectStore.defaultBgColor"
+  );
+  border-radius: 4px;
+}
+
+.project-hero-image::-webkit-scrollbar-thumb:hover {
+  background-color: v-bind(
+    "projectStore.currentProject?.bg_color || projectStore.defaultBgColor"
+  );
+  opacity: 0.8;
 }
 
 .project-hero-image img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  min-height: 100%;
+  object-fit: contain;
+}
+
+.bg__image,
+.bg__blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.bg__image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.bg__blur {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  /* background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1; */
+}
+
+.pos-relative {
+  position: relative;
 }
 
 .row > * {
@@ -201,12 +276,12 @@ definePageMeta({
   margin-bottom: 30px;
 }
 
-.project-sidebar {
+/* .project-sidebar {
   background-color: var(--container-color);
-  /* background: #252734; */
+  background: #252734;
   padding: 60px 40px 75px 40px;
   margin-top: 60px;
-}
+} */
 
 .project-sidebar .title {
   font-size: 30px;
@@ -231,7 +306,8 @@ definePageMeta({
 
 .project-sidebar .project-sidebar-single-box .title-text {
   font-size: 1.2rem;
-  color: rgb(26, 115, 232);
+  color: var(--text-color);
+  /* color: rgb(26, 115, 232); */
   font-weight: var(--font-semi-bold);
   font-family: var(--title-font);
   letter-spacing: 1px;
@@ -254,11 +330,56 @@ definePageMeta({
   }
 }
 
+/* Responsive design for project layout */
+@media screen and (max-width: 1024px) {
+  .project-layout {
+    flex-direction: column;
+  }
+
+  .project-hero-image {
+    display: none;
+  }
+}
+
 /**** Large Devices ****/
 @media screen and (min-width: 1200px) {
   .project-hero-image {
-    height: 600px;
+    height: 800px;
   }
+}
+
+.project-navigation-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--body-color);
+}
+
+.nav-logo-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.nav-logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo-link:hover {
+  transform: scale(1.1);
+}
+
+.nav-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .project-navigation {
@@ -291,9 +412,20 @@ definePageMeta({
 }
 
 @media screen and (max-width: 576px) {
+  .project-navigation-top,
   .project-navigation {
     flex-direction: column;
     gap: 20px;
+  }
+
+  .nav-logo-center {
+    order: -1; /* Move logo to top on mobile */
+    margin-bottom: 10px;
+  }
+
+  .nav-logo {
+    width: 35px;
+    height: 35px;
   }
 
   .nav-link {
