@@ -4,33 +4,42 @@
       <NavBar />
     </header> -->
     <div>
-      <div class="project-navigation-top">
-        <NuxtLink
-          v-if="projectStore.previousProject"
-          :to="`/projects/${projectStore.previousProject.id}`"
-          class="nav-link prev"
-        >
-          <span class="arrow">←</span>
-          <span class="text">Previous Project</span>
-        </NuxtLink>
-
-        <!-- Center Logo -->
-        <div class="nav-logo-center">
-          <NuxtLink to="/" class="nav-logo-link">
-            <img src="/assets/images/logo2.svg" alt="Logo" class="nav-logo" />
-          </NuxtLink>
-        </div>
-
-        <NuxtLink
-          v-if="projectStore.nextProject"
-          :to="`/projects/${projectStore.nextProject.id}`"
-          class="nav-link next"
-        >
-          <span class="text">Next Project</span>
-          <span class="arrow">→</span>
-        </NuxtLink>
-      </div>
-    </div>
+                 <div class="project-navigation-top">
+             <NuxtLink
+               v-if="projectStore.previousProject"
+               :to="`/projects/${projectStore.previousProject.id}`"
+               class="nav-link prev"
+             >
+               <span class="arrow">←</span>
+               <span class="text">Previous Project</span>
+             </NuxtLink>
+             
+             <span v-else class="nav-link prev disabled">
+               <span class="arrow">←</span>
+               <span class="text">Previous Project</span>
+             </span>
+             
+             <div class="nav-logo-center">
+               <NuxtLink to="/" class="nav-logo-link">
+                 <img src="/assets/images/logo2.svg" alt="Logo" class="nav-logo" />
+               </NuxtLink>
+             </div>
+             
+             <NuxtLink
+               v-if="projectStore.nextProject"
+               :to="`/projects/${projectStore.nextProject.id}`"
+               class="nav-link next"
+             >
+               <span class="text">Next Project</span>
+               <span class="arrow">→</span>
+             </NuxtLink>
+             
+             <span v-else class="nav-link next disabled">
+               <span class="text">Next Project</span>
+               <span class="arrow">→</span>
+             </span>
+           </div>
+</div>
 
     <main class="main">
       <slot />

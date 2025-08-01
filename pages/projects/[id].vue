@@ -10,8 +10,8 @@
     >
       <div class="project-details-box">
         <div class="container">
-          <!-- Project Navigation at the top -->
-          <!-- <div class="project-navigation-top">
+                     <!-- Project Navigation at the top -->
+           <!-- <div class="project-navigation-top">
              <NuxtLink
                v-if="projectStore.previousProject"
                :to="`/projects/${projectStore.previousProject.id}`"
@@ -21,11 +21,16 @@
                <span class="text">Previous Project</span>
              </NuxtLink>
              
-              <div class="nav-logo-center">
-                <NuxtLink to="/" class="nav-logo-link">
-                  <img src="/assets/images/logo2.svg" alt="Logo" class="nav-logo" />
-                </NuxtLink>
-              </div>
+             <span v-else class="nav-link prev disabled">
+               <span class="arrow">←</span>
+               <span class="text">Previous Project</span>
+             </span>
+             
+             <div class="nav-logo-center">
+               <NuxtLink to="/" class="nav-logo-link">
+                 <img src="/assets/images/logo2.svg" alt="Logo" class="nav-logo" />
+               </NuxtLink>
+             </div>
              
              <NuxtLink
                v-if="projectStore.nextProject"
@@ -35,6 +40,11 @@
                <span class="text">Next Project</span>
                <span class="arrow">→</span>
              </NuxtLink>
+             
+             <span v-else class="nav-link next disabled">
+               <span class="text">Next Project</span>
+               <span class="arrow">→</span>
+             </span>
            </div> -->
 
           <div class="row project-layout">
@@ -153,6 +163,7 @@ definePageMeta({
   display: flex;
   align-items: flex-start;
   gap: 1rem;
+  margin-bottom: 100px;
 }
 
 .project-details {
@@ -166,7 +177,6 @@ definePageMeta({
   border: 1px solid transparent;
   background-clip: padding-box;
   padding: 60px 40px 75px 40px;
-  margin-bottom: 100px;
 }
 
 .project-hero-image {
@@ -401,6 +411,17 @@ definePageMeta({
 
 .nav-link:hover {
   color: rgb(26, 115, 232);
+}
+
+.nav-link.disabled {
+  color: var(--text-color-light);
+  cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.nav-link.disabled:hover {
+  color: var(--text-color-light);
 }
 
 .nav-link .arrow {
