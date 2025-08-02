@@ -646,6 +646,15 @@ body.dark-theme {
 
 
 /*=============== About ===============*/
+.about {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url("~/assets/images/portfolio_pic.webp") center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+}
+
 .about__description{
   margin-bottom: 2rem;
 }

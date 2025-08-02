@@ -437,6 +437,85 @@ onMounted(async () => {
     });
   });
 
+  // Scroll animations for skills content (same as filter-item animation)
+  const skillsContent = document.querySelectorAll(".skills__content");
+  skillsContent.forEach((item) => {
+    gsap.fromTo(
+      item,
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: item,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+          markers: false,
+        },
+      }
+    );
+  });
+
+  // Scroll animations for section titles and subtitles (same as filter-item animation)
+  const sectionTitles = document.querySelectorAll(
+    ".section__title, .section__subtitle"
+  );
+  sectionTitles.forEach((item) => {
+    gsap.fromTo(
+      item,
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: item,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+          markers: false,
+        },
+      }
+    );
+  });
+
+  // Scroll animations for projects filter navigation (same as filter-item animation)
+  const projectsFilterNav = document.querySelectorAll(
+    ".projects-gallery-filter-nav"
+  );
+  projectsFilterNav.forEach((item) => {
+    gsap.fromTo(
+      item,
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: item,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+          markers: false,
+        },
+      }
+    );
+  });
+
   // Special handling for intro section
   const introElements = document.querySelectorAll(".intro .wow");
   introElements.forEach((element, index) => {
@@ -530,11 +609,30 @@ article {
   opacity: 0;
 }
 
-.custom-link {
+/* Hide skills content initially for animation */
+.skills__content {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* Hide section titles and subtitles initially for animation */
+.section__title,
+.section__subtitle {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* Hide projects filter nav initially for animation */
+.projects-gallery-filter-nav {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* .custom-link {
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
-}
+} */
 
 /* .button {
   display: inline-flex;

@@ -167,8 +167,9 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 200px;
+    min-width: 200px;
     padding: 1rem 3rem;
+    text-align: center;
     /* box-shadow: var(--box-shadow-inset); */
     background-color: var(--text-color);
     /* border: 1px solid var(--text-color); */
@@ -414,7 +415,39 @@ body.dark-theme {
   }
   
 
-  /*=============== SKILLS ===============*/
+  /*=============== ABOUT ===============*/
+.about {
+  position: relative;
+  background: linear-gradient(hsla(100, 100%, 99%, 0.9), hsla(100, 100%, 99%, 0.9)), 
+              url("~/assets/images/portfolio_pic.webp") center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--title-color);
+}
+
+/* Dark theme override for about section */
+.dark-theme .about {
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), 
+              url("~/assets/images/portfolio_pic.webp") center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+.about__description{
+  margin-bottom: 2rem;
+}
+
+/*=============== CUSTOM LINK ===============*/
+.custom-link {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Small screens - display as block */
+
+/*=============== SKILLS ===============*/
 .skills__container{
     row-gap: 3.5rem;
 }
@@ -962,6 +995,8 @@ body.dark-theme {
     .home__info p{
       font-size: var(--h3-font-size);  
     }
+
+    
   
   
     .skills__container{
@@ -973,6 +1008,25 @@ body.dark-theme {
       justify-content: center;
     }
   
+  }
+
+  @media screen and (max-width: 568px) {
+    .custom-link {
+      display: block;
+    }
+    
+    .custom-link a {
+      display: flex;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .button{
+      width: 100%;
+      text-align: center;
+    }
+
   }
   
   @media screen and (min-width: 767px) {
