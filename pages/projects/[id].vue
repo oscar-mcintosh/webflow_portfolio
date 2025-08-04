@@ -177,6 +177,9 @@ definePageMeta({
   border: 1px solid transparent;
   background-clip: padding-box;
   padding: 60px 40px 75px 40px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: easeInDetails 0.8s ease-out 0.1s forwards;
 }
 
 .project-hero-image {
@@ -193,6 +196,9 @@ definePageMeta({
       "projectStore.currentProject?.bg_color || projectStore.defaultBgColor"
     )
     white;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out 0.3s forwards;
 }
 
 .project-hero-image::-webkit-scrollbar {
@@ -238,6 +244,7 @@ definePageMeta({
 .bg__image {
   object-fit: cover;
   object-position: center;
+  transition: opacity 0.8s ease-out;
 }
 
 .bg__blur {
@@ -312,6 +319,7 @@ definePageMeta({
   margin-bottom: 10px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  border-radius: 10px;
 }
 
 .project-sidebar .project-sidebar-single-box .title-text {
@@ -453,4 +461,28 @@ definePageMeta({
     justify-content: center;
   }
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes easeInDetails {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 </style>

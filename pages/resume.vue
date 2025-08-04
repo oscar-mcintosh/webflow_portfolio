@@ -37,6 +37,7 @@
             <li>Responsive Design</li>
             <li>UI/UX Design</li>
             <li>JavaScript/TypeScript</li>
+            <li>SQL</li>
             <li>Git Version Control</li>
             <li>Project Management</li>
             <li>Client Communication</li>

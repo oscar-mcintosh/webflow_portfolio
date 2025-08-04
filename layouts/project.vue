@@ -21,7 +21,7 @@
              
              <div class="nav-logo-center">
                <NuxtLink to="/" class="nav-logo-link">
-                 <img src="/assets/images/logo2.svg" alt="Logo" class="nav-logo" />
+                 <AnimatedLogo class="nav-logo" />
                </NuxtLink>
              </div>
              
@@ -61,6 +61,14 @@ const projectStore = useProjectStore();
   /* bottom: 2rem; */
   z-index: var(--z-fixed);
   box-shadow: 0 4px 20px hsla(207, 24%, 35%, 0.1);
+}
+
+.nav-logo-center {
+  --bg-color: v-bind(projectStore.currentProject?.bg_color || 'black');
+}
+
+.text {
+  color: v-bind(projectStore.currentProject?.bg_color || 'black');
 }
 
 /* Remove padding from footer container on project layout */

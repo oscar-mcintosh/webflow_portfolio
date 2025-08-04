@@ -66,12 +66,21 @@ export const useProjectStore = defineStore('project', () => {
       // Find current project index
       currentProjectIndex.value = allProjects.value.findIndex((p) => p.id === id);
 
-      // Set next and previous projects
+      // Set next and previous projects with circular navigation
+      const totalProjects = allProjects.value.length;
+      
+      // Previous project (loop to last if at first)
       if (currentProjectIndex.value > 0) {
         previousProject.value = allProjects.value[currentProjectIndex.value - 1];
+      } else {
+        previousProject.value = allProjects.value[totalProjects - 1]; // Last project
       }
-      if (currentProjectIndex.value < allProjects.value.length - 1) {
+      
+      // Next project (loop to first if at last)
+      if (currentProjectIndex.value < totalProjects - 1) {
         nextProject.value = allProjects.value[currentProjectIndex.value + 1];
+      } else {
+        nextProject.value = allProjects.value[0]; // First project
       }
     } catch (error) {
       console.error("Error fetching project:", error);
