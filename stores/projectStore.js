@@ -36,6 +36,7 @@ export const useProjectStore = defineStore('project', () => {
         bg_color: record.fields.bg_color,
         category: record.fields.category || 'Uncategorized',
         order: record.fields.order || 999,
+        font_color: record.fields.font_color
       })).sort((a, b) => a.order - b.order);
       isInitialized.value = true;
     } catch (error) {
@@ -61,6 +62,7 @@ export const useProjectStore = defineStore('project', () => {
         description: data.fields.description,
         technology: data.fields.subtitle,
         bg_color: data.fields.bg_color,
+        font_color: data.fields.font_color,
       };
       
       // Find current project index

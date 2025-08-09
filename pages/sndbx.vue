@@ -54,16 +54,16 @@
     <div class="pattern-bg"></div>
     <div class="container">
       <div class="row">
-        <div class="col-12 wow fadeIn">
+        <div class="col-12">
           <h6>The Two Forty Two Dev</h6>
           <h2>Web Development, UI/UX, A.I</h2>
         </div>
         <!-- end col-12 -->
-        <!-- <div class="col-lg-5 wow fadeIn">
+        <!-- <div class="col-lg-5">
           <h4>Two Forty Two Dev's.</h4>
         </div> -->
         <!-- end col-5 -->
-        <div class="col-lg-7 wow fadeIn" data-wow-delay="0.10s">
+        <div class="col-lg-7" data-wow-delay="0.10s">
           <p>
            Hello! My name is Oscar McIntosh. I'm a Freelance and Contract Frontend, Webflow, Web Developer based in the heart of Lincoln, Nebraska, and passion for crafting beautiful and functional websites. With six years of hands-on experience under my belt, I've honed my skills in HTML, CSS, JavaScript, and Vue.js.
           </p>
@@ -104,12 +104,12 @@
     <!-- end video-bg -->
     <div class="container">
       <div class="row">
-        <div class="col-12 wow fadeIn">
+        <div class="col-12">
           <h6>SMOOTH INTERFACE INTERACTION</h6>
           <h2>Creation of friendly web interface layout</h2>
         </div>
         <!-- end col-12 -->
-        <div class="col-md-4 wow fadeIn" data-wow-delay="0s">
+        <div class="col-md-4" data-wow-delay="0s">
           <div class="content-box">
             <div class="left"><small>01</small><span></span></div>
             <!-- end left -->
@@ -129,7 +129,7 @@
           <!-- end content-box -->
         </div>
         <!-- end col-4 -->
-        <div class="col-md-4 wow fadeIn" data-wow-delay="0.05s">
+        <div class="col-md-4" data-wow-delay="0.05s">
           <div class="content-box">
             <div class="left"><small>02</small><span></span></div>
             <!-- end left -->
@@ -149,7 +149,7 @@
           <!-- end content-box -->
         </div>
         <!-- end col-4 -->
-        <div class="col-md-4 wow fadeIn" data-wow-delay="0.10s">
+        <div class="col-md-4" data-wow-delay="0.10s">
           <div class="content-box">
             <div class="left"><small>03</small><span></span></div>
             <!-- end left -->
@@ -178,7 +178,7 @@
   <section class="works">
     <div class="container">
       <div class="row">
-        <div class="col-12 wow fadeIn">
+        <div class="col-12">
           <h6>SMOOTH INTERFACE INTERACTION</h6>
           <h2 data-text="Works">Our selected works and showcases</h2>
         </div>
@@ -198,19 +198,19 @@
   <section class="work-with-us">
     <div class="container">
       <div class="row">
-        <div class="col-12 wow fadeIn">
+        <div class="col-12">
           <h6>START WORKING WITH US</h6>
           <h2 data-text="Hire us">
             So that's us. There's no other way to put it.
           </h2>
         </div>
         <!-- end col-12 -->
-        <div class="col-lg-5 col-md-8 wow fadeIn">
+        <div class="col-lg-5 col-md-8">
           <h4>
             Do you have a project opportunity, or are you just a looking to get
             creative solutions?
           </h4>
-          <div class="custom-link wow fadeIn">
+          <div class="custom-link">
             <a href="#">
               <div class="lines"><span></span> <span></span></div>
               <!-- end lines -->
@@ -399,37 +399,7 @@ onMounted(async () => {
     );
   });
 
-  // Setup scroll animations for fadeIn elements
-  const fadeInElements = document.querySelectorAll(".fadeIn");
-
-  fadeInElements.forEach((element, index) => {
-    // Get the delay from data-wow-delay if it exists
-    const delay = element.getAttribute("data-wow-delay")
-      ? parseFloat(element.getAttribute("data-wow-delay")) * 0.1
-      : 0;
-
-    gsap.fromTo(
-      element,
-      {
-        opacity: 0,
-        y: 50,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        delay: delay,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: element,
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse",
-          markers: false,
-        },
-      }
-    );
-  });
+  // Removed legacy fadeIn handling
 });
 </script>
 

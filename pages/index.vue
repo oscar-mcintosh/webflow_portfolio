@@ -42,7 +42,7 @@
     <section class="about section" id="about">
       <div class="about__container container grid section__border">
         <div class="about__data">
-          <h2 class="section__title">
+          <h2 class="section__title" data-animate="fadeup">
             About <span>Me</span>
             <span class="section__subtitle"></span>
           </h2>
@@ -78,7 +78,7 @@
           </p>
           <!-- <a href="#contact" class="button">Contact Me</a> -->
         </div>
-        <div class="custom-link wow">
+        <div class="custom-link">
           <NuxtLink to="/resume" class="button">
             <b>VIEW RESUME</b>
           </NuxtLink>
@@ -95,11 +95,11 @@
         <h2 class="section__title">Skills</h2>
         <span class="section__subtitle"></span>
 
-        <div class="skills__content" data-animate="fadeup">
+        <div class="skills__content">
           <h3 class="skills__title">
             <i class="ri-braces-line"></i>Frontend Developer
           </h3>
-          <div class="skills__info">
+          <div class="skills__info intro wow" data-animate="fadeup">
             <div class="skills__data">
               <div class="skills__blob">
                 <img src="~/assets/images/html-1.svg" alt="skills image" />
@@ -175,7 +175,7 @@
     <!-- <section id="experience2">
       <div class="video-bg"></div>
       <div class="container">
-        <div class="col-lg-6 wow fadeIn services-intro" data-wow-delay="0.2s">
+          <div class="col-lg-6 services-intro">
           <h6 class="section__subtitle">How we can be helpful</h6>
           <h2 class="services-title section__title">
             UX/UI design & web development
@@ -183,7 +183,7 @@
         </div>
 
         <div class="services-row grid projects__container skills__info">
-          <div class="service-card wow fadeIn" data-wow-delay="0s">
+            <div class="service-card">
             <div class="skills__blob2 border-center-demo">
               <img src="~/assets/images/vue-9.svg" alt="skills image" />
             </div>
@@ -209,7 +209,7 @@
             </div>
           </div>
 
-          <div class="service-card wow fadeIn" data-wow-delay="0.05s">
+            <div class="service-card">
             <div class="skills__blob2 border-center-demo">
               <img src="~/assets/images/webflow-icon.svg" alt="skills image" />
             </div>
@@ -235,7 +235,7 @@
             </div>
           </div>
 
-          <div class="service-card wow fadeIn" data-wow-delay="0.10s">
+            <div class="service-card">
             <div class="skills__blob2 border-center-demo">
               <img
                 src="~/assets/images/google-search-ads.svg"
@@ -276,7 +276,7 @@
     <section class="works section" id="portfolio">
       <div class="container section__border">
         <div class="row">
-          <div class="col-12 wow fadeIn projects-intro">
+          <div class="col-12 projects-intro" data-animate="fadeup">
             <h6 class="section__subtitle">SMOOTH INTERFACE INTERACTION</h6>
             <h2 class="section__title">My selected works and portfolio</h2>
           </div>
@@ -332,6 +332,8 @@ onMounted(async () => {
   if (!projectStore.isInitialized) {
     await projectStore.fetchAllProjects();
   }
+  // Ensure DOM updates are flushed before measuring viewport
+  await nextTick();
 
   // Initialize other animations
   // Create a master timeline for content animations
@@ -391,130 +393,9 @@ onMounted(async () => {
       0.8
     );
 
-  // Scroll animations for fadeIn elements
-  const fadeInElements = document.querySelectorAll(".fadeIn");
-  fadeInElements.forEach((element) => {
-    const delay = element.getAttribute("data-wow-delay")
-      ? parseFloat(element.getAttribute("data-wow-delay"))
-      : 0;
+  // Removed legacy fadeIn handling for a clean slate
 
-    // Set initial state and clear any existing animations
-    gsap.set(element, { opacity: 0, y: 30, clearProps: "all" });
-
-    gsap.to(element, {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      delay: delay,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: element,
-        start: "top 85%",
-        end: "bottom 15%",
-        toggleActions: "play none none reverse",
-        markers: false,
-      },
-    });
-  });
-
-  // Scroll animations for content boxes
-  const contentBoxes = document.querySelectorAll(".content-box");
-  contentBoxes.forEach((box) => {
-    gsap.set(box, { opacity: 0, y: 30, clearProps: "all" });
-
-    gsap.to(box, {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: box,
-        start: "top 85%",
-        end: "bottom 15%",
-        toggleActions: "play none none reverse",
-        markers: false,
-      },
-    });
-  });
-
-  // Scroll animations for skills content (same as filter-item animation)
-  const skillsContent = document.querySelectorAll(".skills__content");
-  skillsContent.forEach((item) => {
-    gsap.fromTo(
-      item,
-      {
-        opacity: 0,
-        y: 50,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: item,
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse",
-          markers: false,
-        },
-      }
-    );
-  });
-
-  // Scroll animations for section titles and subtitles (same as filter-item animation)
-  const sectionTitles = document.querySelectorAll(
-    ".section__title, .section__subtitle"
-  );
-  sectionTitles.forEach((item) => {
-    gsap.fromTo(
-      item,
-      {
-        opacity: 0,
-        y: 50,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: item,
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse",
-          markers: false,
-        },
-      }
-    );
-  });
-
-  // Scroll animations for projects filter navigation (same as filter-item animation)
-  const projectsFilterNav = document.querySelectorAll(
-    ".projects-gallery-filter-nav"
-  );
-  projectsFilterNav.forEach((item) => {
-    gsap.fromTo(
-      item,
-      {
-        opacity: 0,
-        y: 50,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: item,
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse",
-          markers: false,
-        },
-      }
-    );
-  });
+  // Removed contentBoxes, skillsContent, skillsInfo, sectionTitles, and projectsFilter animations for fresh start
 
   // Special handling for intro section
   const introElements = document.querySelectorAll(".intro .wow");
@@ -536,6 +417,33 @@ onMounted(async () => {
       },
     });
   });
+
+  // Animate section titles and skills info when entering viewport
+  const scrollTargets = gsap.utils.toArray(
+    ".section__title, .section__subtitle, .skills__info, .custom-link"
+  );
+  scrollTargets.forEach((el) => {
+    gsap.set(el, { opacity: 0, y: 30 });
+    gsap.to(el, {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 85%",
+        end: "bottom 15%",
+        toggleActions: "play none none reverse",
+        markers: false,
+      },
+    });
+  });
+
+  // Defer a refresh to account for layout shifts (images/fonts)
+  requestAnimationFrame(() => ScrollTrigger.refresh());
+  if (typeof window !== "undefined") {
+    window.addEventListener("load", () => ScrollTrigger.refresh(), { once: true });
+  }
 
   // Cleanup function
   onBeforeUnmount(() => {
@@ -611,21 +519,39 @@ article {
 
 /* Hide skills content initially for animation */
 .skills__content {
-  opacity: 0;
-  transform: translateY(50px);
+  opacity: 1;
+  transform: translateY(0);
+  will-change: transform, opacity;
 }
 
-/* Hide section titles and subtitles initially for animation */
-.section__title,
-.section__subtitle {
+/* Hide skills info elements initially for animation */
+.skills__info {
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(30px);
+  will-change: transform, opacity;
+}
+
+/* Hide section titles, subtitles, and custom links initially for animation */
+.section__title,
+.section__subtitle,
+.custom-link {
+  opacity: 0;
+  transform: translateY(30px);
+  will-change: transform, opacity;
 }
 
 /* Hide projects filter nav initially for animation */
 .projects-gallery-filter-nav {
   opacity: 0;
   transform: translateY(50px);
+  will-change: transform, opacity;
+}
+
+/* Ensure filter items are hidden initially */
+.filter-item {
+  opacity: 0;
+  transform: translateY(50px);
+  will-change: transform, opacity;
 }
 
 /* .custom-link {

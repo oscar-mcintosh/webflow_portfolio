@@ -10,7 +10,7 @@
           v-for="category in uniqueCategories"
           :key="category"
           :class="[
-            'btn btn-outline-secondary fadeIn',
+            'btn btn-outline-secondary',
             { active: activeCategory === category },
           ]"
           @click="filterProjects(category)"
@@ -58,6 +58,9 @@
             <!-- <ProjectCard :project="project"/> -->
           </article>
         </template>
+        <div v-else-if="!projectStore.isInitialized" class="no-projects">
+          Loading projects...
+        </div>
         <div v-else class="no-projects">No projects found</div>
       </div>
     </template>
@@ -65,7 +68,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, watch } from "vue";
+import { ref, computed, onMounted, watch, nextTick } from "vue";
 import { useProjectStore } from "/stores/projectStore";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -129,52 +132,124 @@ const isFiltered = (project) => {
 };
 
 // Add loading state handling
-const isLoading = computed(() => projectStore.isProjectLoading);
-
-onMounted(() => {
-  // Initial animation setup
-  setupScrollAnimations();
+const isLoading = computed(() => {
+  // Only show spinner when actively loading projects, not when they're just not initialized
+  return projectStore.isProjectLoading;
 });
 
+onMounted(() => {
+  // Wait for next tick to ensure DOM is ready
+  nextTick(() => {
+    // Only setup animations if projects are loaded
+    if (projectStore.allProjects.length > 0) {
+      setupScrollAnimations();
+    }
+  });
+});
+
+// Watch for project store initialization
+watch(
+  () => projectStore.isInitialized,
+  (isInitialized) => {
+    if (isInitialized && projectStore.allProjects.length > 0) {
+      nextTick(() => {
+        setupScrollAnimations();
+      });
+    }
+  },
+  { immediate: true }
+);
+
 const setupScrollAnimations = () => {
-  // Kill any existing ScrollTriggers to prevent duplicates
-  ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+  // Kill only our component's triggers to prevent duplicates
+  ScrollTrigger.getAll()
+    .filter((t) => t.vars?.id?.startsWith?.("project-filter-"))
+    .forEach((t) => t.kill());
 
-  // Select all filter items
-  const items = document.querySelectorAll(".filter-item");
-
-  items.forEach((item, index) => {
-    gsap.fromTo(
-      item,
-      {
-        opacity: 0,
-        y: 50,
-      },
-      {
+  // Wait a bit for DOM to be fully rendered
+  setTimeout(() => {
+    // Animate the filter nav itself
+    const nav = document.querySelector(".projects-gallery-filter-nav");
+    if (nav) {
+      gsap.set(nav, { opacity: 0, y: -30 });
+      gsap.to(nav, {
         opacity: 1,
         y: 0,
         duration: 0.8,
         ease: "power2.out",
         scrollTrigger: {
-          trigger: item,
-          start: "top 80%",
-          end: "bottom 20%",
+          id: "project-filter-nav",
+          trigger: nav,
+          start: "top 85%",
+          end: "bottom 15%",
           toggleActions: "play none none reverse",
           markers: false,
         },
+      });
+    }
+
+    // Select all filter items
+    const items = document.querySelectorAll(".filter-item");
+
+    if (items.length === 0) {
+      console.warn("No filter items found for animation");
+      return;
+    }
+
+    items.forEach((item, index) => {
+      // Set initial state
+      gsap.set(item, { opacity: 0, y: 50 });
+
+      // Check if element is already in viewport
+      const rect = item.getBoundingClientRect();
+      const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
+
+      if (isInViewport) {
+        // Animate immediately if already in view
+        gsap.to(item, {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          delay: index * 0.1,
+          ease: "power2.out",
+        });
+      } else {
+        // Otherwise, animate on scroll
+        gsap.to(item, {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          delay: index * 0.1,
+          ease: "power2.out",
+          scrollTrigger: {
+            id: `project-filter-item-${index}`,
+            trigger: item,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+            markers: false,
+          },
+        });
       }
-    );
-  });
+    });
+  }, 100); // Small delay to ensure DOM is ready
 };
 
 // Watch for changes in filtered projects to re-setup animations
 watch(
   filteredProjects,
-  () => {
-    // Reset opacity and position
-    gsap.set(".filter-item", { opacity: 0, y: 50 });
-    // Re-setup animations
-    setupScrollAnimations();
+  (newProjects) => {
+    if (newProjects.length > 0) {
+      // Use nextTick to ensure DOM updates are complete
+      nextTick(() => {
+        // Reset opacity and position for all items
+        gsap.set(".filter-item", { opacity: 0, y: 50 });
+        // Re-setup animations with a small delay
+        setTimeout(() => {
+          setupScrollAnimations();
+        }, 50);
+      });
+    }
   },
   { flush: "post" }
 );
@@ -192,6 +267,9 @@ watch(
   flex-wrap: wrap;
   gap: 10px;
   margin: 50px 0;
+  opacity: 0;
+  transform: translateY(-30px);
+  will-change: transform, opacity;
 }
 
 .btn-outline-secondary.active {

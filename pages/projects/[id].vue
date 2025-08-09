@@ -1,7 +1,7 @@
 <template>
   <div class="projects section main">
-    <div class="bg__image" v-if="projectStore.currentProject">
-      <img :src="projectStore.currentProject.image" alt="" />
+    <div class="bg__image" v-if="projectStore.currentProject" :class="{ 'fade-in': bgImageLoaded }">
+      <img :src="projectStore.currentProject.image" alt="" @load="onBgImageLoad" />
     </div>
     <div class="bg__blur" v-if="projectStore.currentProject"></div>
     <div
@@ -52,36 +52,37 @@
               <div class="project-content-section pos-relative">
                 <div class="row">
                   <div class="col-lg-8">
-                    <div class="default-content-style pos-relative">
-                      <h2 class="title">
+                    <div class="default-content-style pos-relative" :style="{ color: projectStore.currentProject?.font_color || 'inherit' }">
+                      <h2 class="title" :style="{ color: projectStore.currentProject?.font_color || 'inherit' }">
                         {{ projectStore.currentProject.name }}
                       </h2>
-                      <p>{{ projectStore.currentProject.description }}</p>
+                      <div class="project-description" v-html="safeDescription" :style="{ color: projectStore.currentProject?.font_color || 'inherit' }"></div>
                     </div>
                   </div>
                   <div class="col-xl-3 col-lg-4 offset-xl-1">
-                    <div class="project-sidebar">
-                      <h3 class="title">Information</h3>
+                    <div class="project-sidebar" :style="{ color: projectStore.currentProject?.font_color || 'inherit' }">
+                      <h3 class="title" :style="{ color: projectStore.currentProject?.font_color || 'inherit' }">Information</h3>
                       <ul class="project-sidebar-list-item">
                         <li class="project-sidebar-single-box">
-                          <h6 class="title-text">Project Name:</h6>
-                          <span class="text">{{
+                          <h6 class="title-text" :style="{ color: projectStore.currentProject?.font_color || 'inherit' }">Project Name:</h6>
+                          <span class="text" :style="{ color: projectStore.currentProject?.font_color || 'inherit' }">{{
                             projectStore.currentProject.name
                           }}</span>
                         </li>
                         <li class="project-sidebar-single-box">
-                          <h6 class="title-text">Preview Website:</h6>
-                          <span class="text">
+                          <h6 class="title-text" :style="{ color: projectStore.currentProject?.font_color || 'inherit' }">Preview Website:</h6>
+                          <span class="text" :style="{ color: projectStore.currentProject?.font_color || 'inherit' }">
                             <a
                               :href="projectStore.currentProject.link"
                               target="_blank"
+                              :style="{ color: projectStore.currentProject?.font_color || 'inherit' }"
                               >{{ projectStore.currentProject.link }}</a
                             >
                           </span>
                         </li>
                         <li class="project-sidebar-single-box">
-                          <h6 class="title-text">Technologies used:</h6>
-                          <span class="text">
+                          <h6 class="title-text" :style="{ color: projectStore.currentProject?.font_color || 'inherit' }">Technologies used:</h6>
+                          <span class="text" :style="{ color: projectStore.currentProject?.font_color || 'inherit' }">
                             {{ projectStore.currentProject.technology }}
                           </span>
                         </li>
@@ -90,11 +91,12 @@
                           class="project-sidebar-single-box"
                           v-if="projectStore.currentProject.github"
                         >
-                          <h6 class="title-text">Github Link:</h6>
-                          <span class="text">
+                          <h6 class="title-text" :style="{ color: projectStore.currentProject?.font_color || 'inherit' }">Github Link:</h6>
+                          <span class="text" :style="{ color: projectStore.currentProject?.font_color || 'inherit' }">
                             <a
                               :href="projectStore.currentProject.github"
                               target="_blank"
+                              :style="{ color: projectStore.currentProject?.font_color || 'inherit' }"
                               >{{ projectStore.currentProject.github }}</a
                             >
                           </span>
@@ -119,12 +121,130 @@
 </template>
 
 <script setup>
+import { ref, watch } from 'vue';
+
 const { id } = useRoute().params;
 const projectStore = useProjectStore();
+
+// Reactive state for background image fade-in
+const bgImageLoaded = ref(false);
+
+// Lightweight HTML sanitizer for Airtable rich text
+const sanitizeHtml = (raw) => {
+  if (!raw) return '';
+
+  const isLikelyHtml = /<[^>]+>/.test(raw);
+
+  // Convert plain text to paragraphs and line breaks
+  const textToParagraphs = (text) => {
+    const norm = String(text).replace(/\r\n?/g, '\n').trim();
+    if (!norm) return '';
+    const blocks = norm.split(/\n{2,}/);
+    const html = blocks
+      .map((block) => `<p>${block.replace(/\n/g, '<br/>')}</p>`)
+      .join('');
+    return html;
+  };
+
+  // SSR-safe path: only generate safe markup from plain text; strip tags if raw contained HTML
+  if (typeof window === 'undefined') {
+    if (isLikelyHtml) {
+      return String(raw).replace(/<[^>]*>/g, '');
+    }
+    return textToParagraphs(raw);
+  }
+
+  const allowedTags = new Set([
+    'p','br','strong','em','b','i','u','s','span','ul','ol','li','blockquote','code','pre',
+    'h1','h2','h3','h4','h5','h6','a'
+  ]);
+  const allowedAttrsByTag = {
+    a: new Set(['href','target','rel']),
+    default: new Set(['class'])
+  };
+
+  // If no HTML tags present, wrap into <p> blocks with <br/> for single newlines
+  const input = isLikelyHtml ? String(raw) : textToParagraphs(String(raw));
+
+  const container = document.createElement('div');
+  container.innerHTML = input;
+
+  const cleanNode = (node) => {
+    // Remove disallowed nodes entirely
+    const disallowed = ['script','style','iframe','object','embed','link','meta','form','input','button'];
+    if (node.nodeType === 1) {
+      const tag = node.tagName.toLowerCase();
+      if (disallowed.includes(tag)) {
+        node.remove();
+        return;
+      }
+      if (!allowedTags.has(tag)) {
+        // unwrap unknown tags (keep children)
+        const parent = node.parentNode;
+        if (parent) {
+          while (node.firstChild) parent.insertBefore(node.firstChild, node);
+          parent.removeChild(node);
+        } else {
+          // If no parent, just remove children and skip (safety)
+          while (node.firstChild) node.removeChild(node.firstChild);
+        }
+        return;
+      }
+
+      // Scrub attributes
+      [...node.attributes].forEach((attr) => {
+        const name = attr.name.toLowerCase();
+        const value = attr.value || '';
+        const allowed = (allowedAttrsByTag[tag] || allowedAttrsByTag.default).has(name);
+
+        // Remove any event handlers and javascript: urls
+        const isEvent = name.startsWith('on');
+        const isJsHref = name === 'href' && /^\s*javascript:/i.test(value);
+        if (!allowed || isEvent || isJsHref) {
+          node.removeAttribute(name);
+        }
+      });
+
+      // Ensure external links are safe
+      if (tag === 'a') {
+        const target = node.getAttribute('target');
+        if (target === '_blank') {
+          node.setAttribute('rel', 'noopener noreferrer');
+        }
+      }
+    }
+
+    // Recurse
+    let child = node.firstChild;
+    while (child) {
+      const next = child.nextSibling;
+      cleanNode(child);
+      child = next;
+    }
+  };
+
+  // Clean only the container's children to avoid touching the root holder
+  Array.from(container.childNodes).forEach((child) => cleanNode(child));
+  return container.innerHTML;
+};
+
+const safeDescription = computed(() => sanitizeHtml(projectStore.currentProject?.description || ''));
+
+// Handle background image load event
+const onBgImageLoad = () => {
+  bgImageLoaded.value = true;
+};
+
+// Watch for project changes to reset fade-in state
+watch(() => projectStore.currentProject, () => {
+  bgImageLoaded.value = false;
+});
 
 // Initialize the project data
 onMounted(async () => {
   await projectStore.initializeProject(id);
+  // Reset fade-in state when navigating to new project
+  bgImageLoaded.value = false;
 });
 
 definePageMeta({
@@ -158,6 +278,10 @@ definePageMeta({
   width: 100%;
 }
 
+.title {
+  margin-bottom: 1rem;
+}
+
 /* Project layout styles */
 .project-layout {
   display: flex;
@@ -184,11 +308,17 @@ definePageMeta({
 
 .project-hero-image {
   position: sticky;
-  top: 100px;
+  /* top: 100px; */
   flex: 0 0 400px;
   height: 500px;
   overflow-y: auto;
-  border: 2px solid var(--body-color);
+  /* border: 2px solid var(--body-color); */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+  border: 1px solid transparent;
+  background-clip: padding-box;
   border-radius: 10px;
   margin: 0;
   scrollbar-width: thin;
@@ -245,6 +375,11 @@ definePageMeta({
   object-fit: cover;
   object-position: center;
   transition: opacity 0.8s ease-out;
+  opacity: 0;
+}
+
+.bg__image.fade-in {
+  opacity: 1;
 }
 
 .bg__blur {
@@ -362,7 +497,7 @@ definePageMeta({
 /**** Large Devices ****/
 @media screen and (min-width: 1200px) {
   .project-hero-image {
-    height: 800px;
+    height: 850px;
   }
 }
 

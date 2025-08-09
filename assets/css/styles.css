@@ -82,6 +82,7 @@ ul {
 p {
   line-height: 1.4;
   letter-spacing: 1px;
+  margin-bottom: 1rem;
 }
 
 a {
@@ -109,24 +110,7 @@ button{
 }
 
 .intro .wow,
-.intro .fadeIn {
-  will-change: transform, opacity;
-}
-
-.fadeIn {
-    animation: fadeIn 1s ease-in-out forwards;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+/* removed legacy .fadeIn animation */
   
 
 
